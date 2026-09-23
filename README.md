@@ -129,3 +129,7 @@ python tests/test_tokenizer.py     # tokenizer vs Hugging Face
 - Faster 4-bit kernels (the Q4 path is compute-bound today).
 - Faster prefill on flagship phones.
 - A same-phone comparison with llama.cpp.
+
+## License
+
+MIT, see [LICENSE](LICENSE). The Qwen2.5 model weights have their own license (Apache 2.0).
