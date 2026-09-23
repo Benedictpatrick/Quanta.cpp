@@ -1,0 +1,49 @@
+device: samsung SM-A037U (a03su), Android 13 / API 33
+soc: Mediatek MT6765V/CB
+hardware: mt6765, abis: arm64-v8a,armeabi-v7a,armeabi
+ram: 2.9 GB total, 1.2 GB free
+cores: 8, max MHz: 2301 2301 2301 2301 1800 1800 1800 1800
+model file ready in 9.2 s (435 MB)
+== quanta benchmark
+cpu: 8 hardware threads, default threads 4
+cpu features: asimddp(sdot)=0 fphp=0 asimdhp=0 i8mm=0 sve=0
+kernel: neon
+== kernels
+q8_0  ref       matvec max err 0.00e+00 (of output scale) PASS   9067.1 us    0.51 GB/s (1 thread)
+q8_0  neon      matvec max err 2.09e-07 (of output scale) PASS   4651.1 us    1.00 GB/s (1 thread)
+q8_0  ref       matmul x32: bit-exact PASS  177.31 ms vs 288.63 ms looped matvec (1.63x, 1 thread)
+q8_0  neon      matmul x32: bit-exact PASS   58.93 ms vs 134.78 ms looped matvec (2.29x, 1 thread)
+q4_0  ref       matvec max err 0.00e+00 (of output scale) PASS   9070.9 us    0.27 GB/s (1 thread)
+q4_0  neon      matvec max err 2.54e-07 (of output scale) PASS   3277.1 us    0.75 GB/s (1 thread)
+q4_0  ref       matmul x32: bit-exact PASS  250.25 ms vs 301.19 ms looped matvec (1.20x, 1 thread)
+q4_0  neon      matmul x32: bit-exact PASS   78.87 ms vs  98.58 ms looped matvec (1.25x, 1 thread)
+== load
+loaded /data/user/0/dev.quanta/files/model.qnt in 0.22 s, 4 threads, shortlist head: yes
+== prefill speed
+prefill batched        500 tok:   12.0 tok/s
+prefill token-by-token  64 tok:    5.5 tok/s
+== decode speed, 4 threads (default)
+decode full head:        8.75 tok/s
+decode shortlist head:   8.73 tok/s  (8-bit head read 2.1%)  -> 1.00x
+decode output identical (full vs shortlist): PASS
+sample output: The lighthouse keeper was a man in his late 40s, with long white hair and piercing blue eyes. He had worked at the lighthouse for over three decades, and he knew all of its secrets. He spent most of his days sitting by the side of the lighthouse, staring out into the darkness
+== exactness: batched prefill
+batch pos0=   0 n=   1  max |diff| 0  PASS
+batch pos0=   0 n=  33  max |diff| 0  PASS
+batch pos0=  40 n=  45  max |diff| 0  PASS
+== exactness: shortlist head
+head top_k= 1 over 24 tokens: exact rows mean 264 median 149 p99 1527 of 151936 (0.17%) | head time full 38.31 ms, shortlist 28.61 ms
+  mean bound 8.618 vs mean actual |exact - coarse| 0.273
+head top_k=20 over 24 tokens: exact rows mean 4311 median 3966 p99 18997 of 151936 (2.84%) | head time full 36.69 ms, shortlist 30.99 ms
+  mean bound 8.618 vs mean actual |exact - coarse| 0.273
+head bound violations: 0   mismatches: 0   PASS
+== decode speed, 2 threads
+decode full head:        5.21 tok/s
+decode shortlist head:   5.49 tok/s  (8-bit head read 2.1%)  -> 1.05x
+decode output identical (full vs shortlist): PASS
+== decode speed, 8 threads
+decode full head:        4.46 tok/s
+decode shortlist head:   4.64 tok/s  (8-bit head read 2.1%)  -> 1.04x
+decode output identical (full vs shortlist): PASS
+== done in 253.9 s: ALL PASS
+RESULT: ALL PASS

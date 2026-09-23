@@ -1,0 +1,30 @@
+# Build outputs
+build/
+build-*/
+android/.gradle/
+android/build/
+android/app/build/
+android/app/.cxx/
+android/local.properties
+android/app/src/main/jniLibs/
+dist/
+compile_commands.json
+.cache/
+
+# Models, weights and big data (download/regenerate with scripts/)
+models/
+research/*.pt
+tests/data/*.npy
+*.qnt
+*.gguf
+*.task
+*.safetensors
+
+# Third-party checkouts
+third_party/
+
+# Python / editor
+__pycache__/
+*.pyc
+.vscode/
+.idea/

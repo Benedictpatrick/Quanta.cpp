@@ -1,0 +1,55 @@
+device: samsung SM-A155M (a15), Android 14 / API 34
+soc: Mediatek MT6789V/CD
+hardware: mt6789, abis: arm64-v8a,armeabi-v7a,armeabi
+ram: 5.9 GB total, 2.7 GB free
+cores: 8, max MHz: 2000 2000 2000 2000 2000 2000 2200 2200
+model file ready in 3.2 s (435 MB)
+== quanta benchmark
+cpu: 8 hardware threads, default threads 4
+cpu features: asimddp(sdot)=1 fphp=1 asimdhp=1 i8mm=0 sve=0
+kernel: neon_dot
+== kernels
+q8_0  ref       matvec max err 0.00e+00 (of output scale) PASS   4471.8 us    1.04 GB/s (1 thread)
+q8_0  neon      matvec max err 2.09e-07 (of output scale) PASS    868.6 us    5.33 GB/s (1 thread)
+q8_0  neon_dot  matvec max err 2.51e-07 (of output scale) PASS    580.2 us    7.98 GB/s (1 thread)
+q8_0  ref       matmul x32: bit-exact PASS   70.74 ms vs 114.97 ms looped matvec (1.63x, 1 thread)
+q8_0  neon      matmul x32: bit-exact PASS   22.07 ms vs  28.30 ms looped matvec (1.28x, 1 thread)
+q8_0  neon_dot  matmul x32: bit-exact PASS   14.67 ms vs  23.70 ms looped matvec (1.62x, 1 thread)
+q4_0  ref       matvec max err 0.00e+00 (of output scale) PASS   3419.6 us    0.72 GB/s (1 thread)
+q4_0  neon      matvec max err 2.54e-07 (of output scale) PASS    779.9 us    3.14 GB/s (1 thread)
+q4_0  neon_dot  matvec max err 1.69e-07 (of output scale) PASS    549.1 us    4.46 GB/s (1 thread)
+q4_0  ref       matmul x32: bit-exact PASS  109.28 ms vs 103.36 ms looped matvec (0.95x, 1 thread)
+q4_0  neon      matmul x32: bit-exact PASS   31.33 ms vs  30.70 ms looped matvec (0.98x, 1 thread)
+q4_0  neon_dot  matmul x32: bit-exact PASS   11.61 ms vs  21.01 ms looped matvec (1.81x, 1 thread)
+== load
+loaded /data/user/0/dev.quanta/files/model.qnt in 0.07 s, 4 threads, shortlist head: yes
+== prefill speed
+prefill batched        500 tok:   35.5 tok/s
+prefill token-by-token  64 tok:   15.1 tok/s
+== decode speed, 4 threads (default)
+decode full head:       15.04 tok/s
+decode shortlist head:  15.47 tok/s  (8-bit head read 2.2%)  -> 1.03x
+decode output identical (full vs shortlist): PASS
+sample output: The lighthouse keeper was a man in his late 40s, with long white hair and piercing blue eyes. He had spent most of his life on the island, guarding the beacon that led to the village at night.
+
+One night, as he watched the ship approaching from the harbor, he heard a strange noise
+== exactness: batched prefill
+batch pos0=   0 n=   1  max |diff| 0  PASS
+batch pos0=   0 n=  33  max |diff| 0  PASS
+batch pos0=  40 n=  45  max |diff| 0  PASS
+== exactness: shortlist head
+head top_k= 1 over 24 tokens: exact rows mean 270 median 161 p99 1527 of 151936 (0.18%) | head time full 15.18 ms, shortlist 15.81 ms
+  mean bound 8.627 vs mean actual |exact - coarse| 0.274
+head top_k=20 over 24 tokens: exact rows mean 4356 median 3842 p99 19822 of 151936 (2.87%) | head time full 15.28 ms, shortlist 16.86 ms
+  mean bound 8.627 vs mean actual |exact - coarse| 0.274
+head bound violations: 0   mismatches: 0   PASS
+== decode speed, 2 threads
+decode full head:       22.29 tok/s
+decode shortlist head:  23.15 tok/s  (8-bit head read 2.2%)  -> 1.04x
+decode output identical (full vs shortlist): PASS
+== decode speed, 8 threads
+decode full head:        8.62 tok/s
+decode shortlist head:   9.06 tok/s  (8-bit head read 2.2%)  -> 1.05x
+decode output identical (full vs shortlist): PASS
+== done in 104.6 s: ALL PASS
+RESULT: ALL PASS

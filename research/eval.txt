@@ -1,0 +1,3020 @@
+A. HISTORY OF THE SOFTWARE
+==========================
+
+Python was created in the early 1990s by Guido van Rossum at Stichting
+Mathematisch Centrum (CWI, see https://www.cwi.nl) in the Netherlands
+as a successor of a language called ABC.  Guido remains Python's
+principal author, although it includes many contributions from others.
+
+In 1995, Guido continued his work on Python at the Corporation for
+National Research Initiatives (CNRI, see https://www.cnri.reston.va.us)
+in Reston, Virginia where he released several versions of the
+software.
+
+In May 2000, Guido and the Python core development team moved to
+BeOpen.com to form the BeOpen PythonLabs team.  In October of the same
+year, the PythonLabs team moved to Digital Creations, which became
+Zope Corporation.  In 2001, the Python Software Foundation (PSF, see
+https://www.python.org/psf/) was formed, a non-profit organization
+created specifically to own Python-related Intellectual Property.
+Zope Corporation was a sponsoring member of the PSF.
+
+All Python releases are Open Source (see https://opensource.org for
+the Open Source Definition).  Historically, most, but not all, Python
+releases have also been GPL-compatible; the table below summarizes
+the various releases.
+
+    Release         Derived     Year        Owner       GPL-
+                    from                                compatible? (1)
+
+    0.9.0 thru 1.2              1991-1995   CWI         yes
+    1.3 thru 1.5.2  1.2         1995-1999   CNRI        yes
+    1.6             1.5.2       2000        CNRI        no
+    2.0             1.6         2000        BeOpen.com  no
+    1.6.1           1.6         2001        CNRI        yes (2)
+    2.1             2.0+1.6.1   2001        PSF         no
+    2.0.1           2.0+1.6.1   2001        PSF         yes
+    2.1.1           2.1+2.0.1   2001        PSF         yes
+    2.1.2           2.1.1       2002        PSF         yes
+    2.1.3           2.1.2       2002        PSF         yes
+    2.2 and above   2.1.1       2001-now    PSF         yes
+
+Footnotes:
+
+(1) GPL-compatible doesn't mean that we're distributing Python under
+    the GPL.  All Python licenses, unlike the GPL, let you distribute
+    a modified version without making your changes open source.  The
+    GPL-compatible licenses make it possible to combine Python with
+    other software that is released under the GPL; the others don't.
+
+(2) According to Richard Stallman, 1.6.1 is not GPL-compatible,
+    because its license has a choice of law clause.  According to
+    CNRI, however, Stallman's lawyer has told CNRI's lawyer that 1.6.1
+    is "not incompatible" with the GPL.
+
+Thanks to the many outside volunteers who have worked under Guido's
+direction to make these releases possible.
+
+
+B. TERMS AND CONDITIONS FOR ACCESSING OR OTHERWISE USING PYTHON
+===============================================================
+
+Python software and documentation are licensed under the
+Python Software Foundation License Version 2.
+
+Starting with Python 3.8.6, examples, recipes, and other code in
+the documentation are dual licensed under the PSF License Version 2
+and the Zero-Clause BSD license.
+
+Some software incorporated into Python is under different licenses.
+The licenses are listed with code falling under that license.
+
+
+PYTHON SOFTWARE FOUNDATION LICENSE VERSION 2
+--------------------------------------------
+
+1. This LICENSE AGREEMENT is between the Python Software Foundation
+("PSF"), and the Individual or Organization ("Licensee") accessing and
+otherwise using this software ("Python") in source or binary form and
+its associated documentation.
+
+2. Subject to the terms and conditions of this License Agreement, PSF hereby
+grants Licensee a nonexclusive, royalty-free, world-wide license to reproduce,
+analyze, test, perform and/or display publicly, prepare derivative works,
+distribute, and otherwise use Python alone or in any derivative version,
+provided, however, that PSF's License Agreement and PSF's notice of copyright,
+i.e., "Copyright (c) 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010,
+2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023 Python Software Foundation;
+All Rights Reserved" are retained in Python alone or in any derivative version
+prepared by Licensee.
+
+3. In the event Licensee prepares a derivative work that is based on
+or incorporates Python or any part thereof, and wants to make
+the derivative work available to others as provided herein, then
+Licensee hereby agrees to include in any such work a brief summary of
+the changes made to Python.
+
+4. PSF is making Python available to Licensee on an "AS IS"
+basis.  PSF MAKES NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR
+IMPLIED.  BY WAY OF EXAMPLE, BUT NOT LIMITATION, PSF MAKES NO AND
+DISCLAIMS ANY REPRESENTATION OR WARRANTY OF MERCHANTABILITY OR FITNESS
+FOR ANY PARTICULAR PURPOSE OR THAT THE USE OF PYTHON WILL NOT
+INFRINGE ANY THIRD PARTY RIGHTS.
+
+5. PSF SHALL NOT BE LIABLE TO LICENSEE OR ANY OTHER USERS OF PYTHON
+FOR ANY INCIDENTAL, SPECIAL, OR CONSEQUENTIAL DAMAGES OR LOSS AS
+A RESULT OF MODIFYING, DISTRIBUTING, OR OTHERWISE USING PYTHON,
+OR ANY DERIVATIVE THEREOF, EVEN IF ADVISED OF THE POSSIBILITY THEREOF.
+
+6. This License Agreement will automatically terminate upon a material
+breach of its terms and conditions.
+
+7. Nothing in this License Agreement shall be deemed to create any
+relationship of agency, partnership, or joint venture between PSF and
+Licensee.  This License Agreement does not grant permission to use PSF
+trademarks or trade name in a trademark sense to endorse or promote
+products or services of Licensee, or any third party.
+
+8. By copying, installing or otherwise using Python, Licensee
+agrees to be bound by the terms and conditions of this License
+Agreement.
+
+
+BEOPEN.COM LICENSE AGREEMENT FOR PYTHON 2.0
+-------------------------------------------
+
+BEOPEN PYTHON OPEN SOURCE LICENSE AGREEMENT VERSION 1
+
+1. This LICENSE AGREEMENT is between BeOpen.com ("BeOpen"), having an
+office at 160 Saratoga Avenue, Santa Clara, CA 95051, and the
+Individual or Organization ("Licensee") accessing and otherwise using
+this software in source or binary form and its associated
+documentation ("the Software").
+
+2. Subject to the terms and conditions of this BeOpen Python License
+Agreement, BeOpen hereby grants Licensee a non-exclusive,
+royalty-free, world-wide license to reproduce, analyze, test, perform
+and/or display publicly, prepare derivative works, distribute, and
+otherwise use the Software alone or in any derivative version,
+provided, however, that the BeOpen Python License is retained in the
+Software, alone or in any derivative version prepared by Licensee.
+
+3. BeOpen is making the Software available to Licensee on an "AS IS"
+basis.  BEOPEN MAKES NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR
+IMPLIED.  BY WAY OF EXAMPLE, BUT NOT LIMITATION, BEOPEN MAKES NO AND
+DISCLAIMS ANY REPRESENTATION OR WARRANTY OF MERCHANTABILITY OR FITNESS
+FOR ANY PARTICULAR PURPOSE OR THAT THE USE OF THE SOFTWARE WILL NOT
+INFRINGE ANY THIRD PARTY RIGHTS.
+
+4. BEOPEN SHALL NOT BE LIABLE TO LICENSEE OR ANY OTHER USERS OF THE
+SOFTWARE FOR ANY INCIDENTAL, SPECIAL, OR CONSEQUENTIAL DAMAGES OR LOSS
+AS A RESULT OF USING, MODIFYING OR DISTRIBUTING THE SOFTWARE, OR ANY
+DERIVATIVE THEREOF, EVEN IF ADVISED OF THE POSSIBILITY THEREOF.
+
+5. This License Agreement will automatically terminate upon a material
+breach of its terms and conditions.
+
+6. This License Agreement shall be governed by and interpreted in all
+respects by the law of the State of California, excluding conflict of
+law provisions.  Nothing in this License Agreement shall be deemed to
+create any relationship of agency, partnership, or joint venture
+between BeOpen and Licensee.  This License Agreement does not grant
+permission to use BeOpen trademarks or trade names in a trademark
+sense to endorse or promote products or services of Licensee, or any
+third party.  As an exception, the "BeOpen Python" logos available at
+http://www.pythonlabs.initialized = True
+
+class TestFrozenUtf8_1:
+    """\u00b6"""
+
+class TestFrozenUtf8_2:
+    """\u03c0"""
+
+class TestFrozenUtf8_4:
+    """\U0001f600"""
+
+def main():
+    print("Hello world!")
+
+if __name__ == '__main__':
+    main()
+"""
+Basic subprocess implementation for POSIX which only uses os functions. Only
+implement features required by setup.py to build C extension modules when
+subprocess is unavailable. setup.py is not used on Windows.
+"""
+import os
+
+
+# distutils.spawn used by distutils.command.build_ext
+# calls subprocess.Popen().wait()
+class Popen:
+    def __init__(self, cmd, env=None):
+        self._cmd = cmd
+        self._env = env
+        self.returncode = None
+
+    def wait(self):
+        pid = os.fork()
+        if pid == 0:
+            # Child process
+            try:
+                if self._env is not None:
+                    os.execve(self._cmd[0], self._cmd, self._env)
+                else:
+                    os.execv(self._cmd[0], self._cmd)
+            finally:
+                os._exit(1)
+        else:
+            # Parent process
+            _, status = os.waitpid(pid, 0)
+            self.returncode = os.waitstatus_to_exitcode(status)
+
+        return self.returncode
+
+
+def _check_cmd(cmd):
+    # Use regex [a-zA-Z0-9./-]+: reject empty string, space, etc.
+    safe_chars = []
+    for first, last in (("a", "z"), ("A", "Z"), ("0", "9")):
+        for ch in range(ord(first), ord(last) + 1):
+            safe_chars.append(chr(ch))
+    safe_chars.append("./-")
+    safe_chars = ''.join(safe_chars)
+
+    if isinstance(cmd, (tuple, list)):
+        check_strs = cmd
+    elif isinstance(cmd, str):
+        check_strs = [cmd]
+    else:
+        return False
+
+    for arg in check_strs:
+        if not isinstance(arg, str):
+            return False
+        if not arg:
+            # reject empty string
+            return False
+        for ch in arg:
+            if ch not in safe_chars:
+                return False
+
+    return True
+
+
+# _aix_support used by distutil.util calls subprocess.check_output()
+def check_output(cmd, **kwargs):
+    if kwargs:
+        raise NotImplementedError(repr(kwargs))
+
+    if not _check_cmd(cmd):
+        raise ValueError(f"unsupported command: {cmd!r}")
+
+    tmp_filename = "check_output.tmp"
+    if not isinstance(cmd, str):
+        cmd = " ".join(cmd)
+    cmd = f"{cmd} >{tmp_filename}"
+
+    try:
+        # system() spawns a shell
+        status = os.system(cmd)
+        exitcode = os.waitstatus_to_exitcode(status)
+        if exitcode:
+            raise ValueError(f"Command {cmd!r} returned non-zero "
+                             f"exit status {exitcode!r}")
+
+        try:
+            with open(tmp_filename, "rb") as fp:
+                stdout = fp.read()
+      # This module is used to map the old Python 2 names to the new names used in
+# Python 3 for the pickle module.  This needed to make pickle streams
+# generated with Python 2 loadable by Python 3.
+
+# This is a copy of lib2to3.fixes.fix_imports.MAPPING.  We cannot import
+# lib2to3 and use the mapping defined there, because lib2to3 uses pickle.
+# Thus, this could cause the module to be imported recursively.
+IMPORT_MAPPING = {
+    '__builtin__' : 'builtins',
+    'copy_reg': 'copyreg',
+    'Queue': 'queue',
+    'SocketServer': 'socketserver',
+    'ConfigParser': 'configparser',
+    'repr': 'reprlib',
+    'tkFileDialog': 'tkinter.filedialog',
+    'tkSimpleDialog': 'tkinter.simpledialog',
+    'tkColorChooser': 'tkinter.colorchooser',
+    'tkCommonDialog': 'tkinter.commondialog',
+    'Dialog': 'tkinter.dialog',
+    'Tkdnd': 'tkinter.dnd',
+    'tkFont': 'tkinter.font',
+    'tkMessageBox': 'tkinter.messagebox',
+    'ScrolledText': 'tkinter.scrolledtext',
+    'Tkconstants': 'tkinter.constants',
+    'Tix': 'tkinter.tix',
+    'ttk': 'tkinter.ttk',
+    'Tkinter': 'tkinter',
+    'markupbase': '_markupbase',
+    '_winreg': 'winreg',
+    'thread': '_thread',
+    'dummy_thread': '_dummy_thread',
+    'dbhash': 'dbm.bsd',
+    'dumbdbm': 'dbm.dumb',
+    'dbm': 'dbm.ndbm',
+    'gdbm': 'dbm.gnu',
+    'xmlrpclib': 'xmlrpc.client',
+    'SimpleXMLRPCServer': 'xmlrpc.server',
+    'httplib': 'http.client',
+    'htmlentitydefs' : 'html.entities',
+    'HTMLParser' : 'html.parser',
+    'Cookie': 'http.cookies',
+    'cookielib': 'http.cookiejar',
+    'BaseHTTPServer': 'http.server',
+    'test.test_support': 'test.support',
+    'commands': 'subprocess',
+    'urlparse' : 'urllib.parse',
+    'robotparser' : 'urllib.robotparser',
+    'urllib2': 'urllib.request',
+    'anydbm': 'dbm',
+    '_abcoll' : 'collections.abc',
+}
+
+
+# This contains rename rules that are easy to handle.  We ignore the more
+# complex stuff (e.g. mapping the names in the urllib and types modules).
+# These rules should be run before import names are fixed.
+NAME_MAPPING = {
+    ('__builtin__', 'xrange'):     ('builtins', 'range'),
+    ('__builtin__', 'reduce'):     ('functools', 'reduce'),
+    ('__builtin__', 'intern'):     ('sys', 'intern'),
+    ('__builtin__', 'unichr'):     ('builtins', 'chr'),
+    ('__builtin__', 'unicode'):    ('builtins', 'str'),
+    ('__builtin__', 'long'):       ('builtins', 'int'),
+    ('itertools', 'izip'):         ('builtins', 'zip'),
+    ('itertools', 'imap'):         ('builtins', 'map'),
+    ('it"""Shared support for scanning document type declarations in HTML and XHTML.
+
+This module is used as a foundation for the html.parser module.  It has no
+documented public API and should not be used directly.
+
+"""
+
+import re
+
+_declname_match = re.compile(r'[a-zA-Z][-_.a-zA-Z0-9]*\s*').match
+_declstringlit_match = re.compile(r'(\'[^\']*\'|"[^"]*")\s*').match
+_commentclose = re.compile(r'--\s*>')
+_markedsectionclose = re.compile(r']\s*]\s*>')
+
+# An analysis of the MS-Word extensions is available at
+# http://www.planetpublish.com/xmlarena/xap/Thursday/WordtoXML.pdf
+
+_msmarkedsectionclose = re.compile(r']\s*>')
+
+del re
+
+
+class ParserBase:
+    """Parser base class which provides some common support methods used
+    by the SGML/HTML and XHTML parsers."""
+
+    def __init__(self):
+        if self.__class__ is ParserBase:
+            raise RuntimeError(
+                "_markupbase.ParserBase must be subclassed")
+
+    def reset(self):
+        self.lineno = 1
+        self.offset = 0
+
+    def getpos(self):
+        """Return current line number and offset."""
+        return self.lineno, self.offset
+
+    # Internal -- update line number and offset.  This should be
+    # called for each piece of data exactly once, in order -- in other
+    # words the concatenation of all the input strings to this
+    # function should be exactly the entire input.
+    def updatepos(self, i, j):
+        if i >= j:
+            return j
+        rawdata = self.rawdata
+        nlines = rawdata.count("\n", i, j)
+        if nlines:
+            self.lineno = self.lineno + nlines
+            pos = rawdata.rindex("\n", i, j) # Should not fail
+            self.offset = j-(pos+1)
+        else:
+            self.offset = self.offset + j-i
+        return j
+
+    _decl_otherchars = ''
+
+    # Internal -- parse declaration (for use by subclasses).
+    def parse_declaration(self, i):
+        # This is some sort of declaration; in "HTML as
+        # deployed," this should only be the document type
+        # declaration ("<!DOCTYPE html...>").
+        # ISO 8879:1986, however, has more complex
+        # declaration syntax for elements in <!...>, including:
+        # --comment--
+        # [marked section]
+        # name in the following list: ENTITY, DOCTYPE, ELEMENT,
+        # ATTLIST, NOTATION, SHORTREF, USEMAP,
+        # LINKTYPE, LINK, IDLINK, USELINK, SYSTEM
+        rawdata = self.rawdata
+        j = i + 2
+        assert rawdata[i:j] == "<!", "unexpected call to parse_declaration"
+        if rawdata[j:j+1]from _weakrefset import WeakSet
+
+
+def get_cache_token():
+    """Returns the current ABC cache token.
+
+    The token is an opaque object (supporting equality testing) identifying the
+    current version of the ABC cache for virtual subclasses. The token changes
+    with every call to ``register()`` on any ABC.
+    """
+    return ABCMeta._abc_invalidation_counter
+
+
+class ABCMeta(type):
+    """Metaclass for defining Abstract Base Classes (ABCs).
+
+    Use this metaclass to create an ABC.  An ABC can be subclassed
+    directly, and then acts as a mix-in class.  You can also register
+    unrelated concrete classes (even built-in classes) and unrelated
+    ABCs as 'virtual subclasses' -- these and their descendants will
+    be considered subclasses of the registering ABC by the built-in
+    issubclass() function, but the registering ABC won't show up in
+    their MRO (Method Resolution Order) nor will method
+    implementations defined by the registering ABC be callable (not
+    even via super()).
+    """
+
+    # A global counter that is incremented each time a class is
+    # registered as a virtual subclass of anything.  It forces the
+    # negative cache to be cleared before its next use.
+    # Note: this counter is private. Use `abc.get_cache_token()` for
+    #       external code.
+    _abc_invalidation_counter = 0
+
+    def __new__(mcls, name, bases, namespace, /, **kwargs):
+        cls = super().__new__(mcls, name, bases, namespace, **kwargs)
+        # Compute set of abstract method names
+        abstracts = {name
+                     for name, value in namespace.items()
+                     if getattr(value, "__isabstractmethod__", False)}
+        for base in bases:
+            for name in getattr(base, "__abstractmethods__", set()):
+                value = getattr(cls, name, None)
+                if getattr(value, "__isabstractmethod__", False):
+                    abstracts.add(name)
+        cls.__abstractmethods__ = frozenset(abstracts)
+        # Set up inheritance registry
+        cls._abc_registry = WeakSet()
+        cls._abc_cache = WeakSet()
+        cls._abc_negative_cache = WeakSet()
+        cls._abc_negative_cache_version = ABCMeta._abc_invalidation_counter
+        return cls
+
+    def register(cls, subclass):
+        """Register a virtual subclass of an ABC.
+
+        Returns the subclass, to allow usage as a class decorator.
+        """
+        if not isinstance(subclass, type):
+            raise TypeError("Can only register classes")
+        if issu"""
+Python implementation of the io module.
+"""
+
+import os
+import abc
+import codecs
+import errno
+import stat
+import sys
+# Import _thread instead of threading to reduce startup cost
+from _thread import allocate_lock as Lock
+if sys.platform in {'win32', 'cygwin'}:
+    from msvcrt import setmode as _setmode
+else:
+    _setmode = None
+
+import io
+from io import (__all__, SEEK_SET, SEEK_CUR, SEEK_END)
+
+valid_seek_flags = {0, 1, 2}  # Hardwired values
+if hasattr(os, 'SEEK_HOLE') :
+    valid_seek_flags.add(os.SEEK_HOLE)
+    valid_seek_flags.add(os.SEEK_DATA)
+
+# open() uses st_blksize whenever we can
+DEFAULT_BUFFER_SIZE = 8 * 1024  # bytes
+
+# NOTE: Base classes defined here are registered with the "official" ABCs
+# defined in io.py. We don't use real inheritance though, because we don't want
+# to inherit the C implementations.
+
+# Rebind for compatibility
+BlockingIOError = BlockingIOError
+
+# Does io.IOBase finalizer log the exception if the close() method fails?
+# The exception is ignored silently by default in release build.
+_IOBASE_EMITS_UNRAISABLE = (hasattr(sys, "gettotalrefcount") or sys.flags.dev_mode)
+# Does open() check its 'errors' argument?
+_CHECK_ERRORS = _IOBASE_EMITS_UNRAISABLE
+
+
+def text_encoding(encoding, stacklevel=2):
+    """
+    A helper function to choose the text encoding.
+
+    When encoding is not None, this function returns it.
+    Otherwise, this function returns the default text encoding
+    (i.e. "locale" or "utf-8" depends on UTF-8 mode).
+
+    This function emits an EncodingWarning if *encoding* is None and
+    sys.flags.warn_default_encoding is true.
+
+    This can be used in APIs with an encoding=None parameter
+    that pass it to TextIOWrapper or open.
+    However, please consider using encoding="utf-8" for new APIs.
+    """
+    if encoding is None:
+        if sys.flags.utf8_mode:
+            encoding = "utf-8"
+        else:
+            encoding = "locale"
+        if sys.flags.warn_default_encoding:
+            import warnings
+            warnings.warn("'encoding' argument not specified.",
+                          EncodingWarning, stacklevel + 1)
+    return encoding
+
+
+# Wrapper for builtins.open
+#
+# Trick so that open() won't become a bound method when stored
+# as a class variable (as dbm.dumb does).
+#
+# See init_set_builtins_open() in Python/pylifecycle.c.
+@staticmethod
+def open(file, mode="r", buffering=-1, encoding=None, errors=None,
+         newline=None, closefd=True, opener=None):
+
+    r"""Open file and return a stream.  Raise OSErr"""Strptime-related classes and functions.
+
+CLASSES:
+    LocaleTime -- Discovers and stores locale-specific time information
+    TimeRE -- Creates regexes for pattern matching a string of text containing
+                time information
+
+FUNCTIONS:
+    _getlang -- Figure out what language is being used for the locale
+    strptime -- Calculates the time struct represented by the passed-in string
+
+"""
+import time
+import locale
+import calendar
+from re import compile as re_compile
+from re import IGNORECASE
+from re import escape as re_escape
+from datetime import (date as datetime_date,
+                      timedelta as datetime_timedelta,
+                      timezone as datetime_timezone)
+from _thread import allocate_lock as _thread_allocate_lock
+
+__all__ = []
+
+def _getlang():
+    # Figure out what the current language is set to.
+    return locale.getlocale(locale.LC_TIME)
+
+class LocaleTime(object):
+    """Stores and handles locale-specific information related to time.
+
+    ATTRIBUTES:
+        f_weekday -- full weekday names (7-item list)
+        a_weekday -- abbreviated weekday names (7-item list)
+        f_month -- full month names (13-item list; dummy value in [0], which
+                    is added by code)
+        a_month -- abbreviated month names (13-item list, dummy value in
+                    [0], which is added by code)
+        am_pm -- AM/PM representation (2-item list)
+        LC_date_time -- format string for date/time representation (string)
+        LC_date -- format string for date representation (string)
+        LC_time -- format string for time representation (string)
+        timezone -- daylight- and non-daylight-savings timezone representation
+                    (2-item list of sets)
+        lang -- Language used by instance (2-item tuple)
+    """
+
+    def __init__(self):
+        """Set all attributes.
+
+        Order of methods called matters for dependency reasons.
+
+        The locale language is set at the offset and then checked again before
+        exiting.  This is to make sure that the attributes were not set with a
+        mix of information from more than one locale.  This would most likely
+        happen when using threads where one thread calls a locale-dependent
+        function while another thread changes the locale while the function in
+        the other thread is still running.  Proper coding would call for
+        locks to prevent changing the locale while locale-dependent code is
+        running.  The check here is done # Access WeakSet through the weakref module.
+# This code is separated-out because it is needed
+# by abc.py to load everything else at startup.
+
+from _weakref import ref
+from types import GenericAlias
+
+__all__ = ['WeakSet']
+
+
+class _IterationGuard:
+    # This context manager registers itself in the current iterators of the
+    # weak container, such as to delay all removals until the context manager
+    # exits.
+    # This technique should be relatively thread-safe (since sets are).
+
+    def __init__(self, weakcontainer):
+        # Don't create cycles
+        self.weakcontainer = ref(weakcontainer)
+
+    def __enter__(self):
+        w = self.weakcontainer()
+        if w is not None:
+            w._iterating.add(self)
+        return self
+
+    def __exit__(self, e, t, b):
+        w = self.weakcontainer()
+        if w is not None:
+            s = w._iterating
+            s.remove(self)
+            if not s:
+                w._commit_removals()
+
+
+class WeakSet:
+    def __init__(self, data=None):
+        self.data = set()
+        def _remove(item, selfref=ref(self)):
+            self = selfref()
+            if self is not None:
+                if self._iterating:
+                    self._pending_removals.append(item)
+                else:
+                    self.data.discard(item)
+        self._remove = _remove
+        # A list of keys to be removed
+        self._pending_removals = []
+        self._iterating = set()
+        if data is not None:
+            self.update(data)
+
+    def _commit_removals(self):
+        pop = self._pending_removals.pop
+        discard = self.data.discard
+        while True:
+            try:
+                item = pop()
+            except IndexError:
+                return
+            discard(item)
+
+    def __iter__(self):
+        with _IterationGuard(self):
+            for itemref in self.data:
+                item = itemref()
+                if item is not None:
+                    # Caveat: the iterator will keep a strong reference to
+                    # `item` until it is resumed or closed.
+                    yield item
+
+    def __len__(self):
+        return len(self.data) - len(self._pending_removals)
+
+    def __contains__(self, item):
+        try:
+            wr = ref(item)
+        except TypeError:
+            return False
+        return wr in self.data
+
+    def __reduce__(self):
+        return self.__class__, (list(self),), self.__getstate__()
+
+    def add(self, item):
+        if self._pending_removals:
+            self._co"""Stuff to parse AIFF-C and AIFF files.
+
+Unless explicitly stated otherwise, the description below is true
+both for AIFF-C files and AIFF files.
+
+An AIFF-C file has the following structure.
+
+  +-----------------+
+  | FORM            |
+  +-----------------+
+  | <size>          |
+  +----+------------+
+  |    | AIFC       |
+  |    +------------+
+  |    | <chunks>   |
+  |    |    .       |
+  |    |    .       |
+  |    |    .       |
+  +----+------------+
+
+An AIFF file has the string "AIFF" instead of "AIFC".
+
+A chunk consists of an identifier (4 bytes) followed by a size (4 bytes,
+big endian order), followed by the data.  The size field does not include
+the size of the 8 byte header.
+
+The following chunk types are recognized.
+
+  FVER
+      <version number of AIFF-C defining document> (AIFF-C only).
+  MARK
+      <# of markers> (2 bytes)
+      list of markers:
+          <marker ID> (2 bytes, must be > 0)
+          <position> (4 bytes)
+          <marker name> ("pstring")
+  COMM
+      <# of channels> (2 bytes)
+      <# of sound frames> (4 bytes)
+      <size of the samples> (2 bytes)
+      <sampling frequency> (10 bytes, IEEE 80-bit extended
+          floating point)
+      in AIFF-C files only:
+      <compression type> (4 bytes)
+      <human-readable version of compression type> ("pstring")
+  SSND
+      <offset> (4 bytes, not used by this program)
+      <blocksize> (4 bytes, not used by this program)
+      <sound data>
+
+A pstring consists of 1 byte length, a string of characters, and 0 or 1
+byte pad to make the total length even.
+
+Usage.
+
+Reading AIFF files:
+  f = aifc.open(file, 'r')
+where file is either the name of a file or an open file pointer.
+The open file pointer must have methods read(), seek(), and close().
+In some types of audio files, if the setpos() method is not used,
+the seek() method is not necessary.
+
+This returns an instance of a class with the following public methods:
+  getnchannels()  -- returns number of audio channels (1 for
+             mono, 2 for stereo)
+  getsampwidth()  -- returns sample width in bytes
+  getframerate()  -- returns sampling frequency
+  getnframes()    -- returns number of audio frames
+  getcomptype()   -- returns compression type ('NONE' for AIFF files)
+  getcompname()   -- returns human-readable version of
+             compression type ('not compressed' for AIFF files)
+  getparams() -- returns a namedtuple consisting of all of the
+             above in the above order
+  getmarkers()    -- get the list of marks in the aud# Author: Steven J. Bethard <steven.bethard@gmail.com>.
+# New maintainer as of 29 August 2019:  Raymond Hettinger <raymond.hettinger@gmail.com>
+
+"""Command-line parsing library
+
+This module is an optparse-inspired command-line parsing library that:
+
+    - handles both optional and positional arguments
+    - produces highly informative usage messages
+    - supports parsers that dispatch to sub-parsers
+
+The following is a simple usage example that sums integers from the
+command-line and writes the result to a file::
+
+    parser = argparse.ArgumentParser(
+        description='sum the integers at the command line')
+    parser.add_argument(
+        'integers', metavar='int', nargs='+', type=int,
+        help='an integer to be summed')
+    parser.add_argument(
+        '--log', default=sys.stdout, type=argparse.FileType('w'),
+        help='the file where the sum should be written')
+    args = parser.parse_args()
+    args.log.write('%s' % sum(args.integers))
+    args.log.close()
+
+The module contains the following public classes:
+
+    - ArgumentParser -- The main entry point for command-line parsing. As the
+        example above shows, the add_argument() method is used to populate
+        the parser with actions for optional and positional arguments. Then
+        the parse_args() method is invoked to convert the args at the
+        command-line into an object with attributes.
+
+    - ArgumentError -- The exception raised by ArgumentParser objects when
+        there are errors with the parser's actions. Errors raised while
+        parsing the command-line are caught by ArgumentParser and emitted
+        as command-line messages.
+
+    - FileType -- A factory for defining types of files to be created. As the
+        example above shows, instances of FileType are typically passed as
+        the type= argument of add_argument() calls.
+
+    - Action -- The base class for parser actions. Typically actions are
+        selected by passing strings like 'store_true' or 'append_const' to
+        the action= argument of add_argument(). However, for greater
+        customization of ArgumentParser actions, subclasses of Action may
+        be defined and passed as the action= argument.
+
+    - HelpFormatter, RawDescriptionHelpFormatter, RawTextHelpFormatter,
+        ArgumentDefaultsHelpFormatter -- Formatter classes which
+        may be passed as the formatter_class= argument to the
+        ArgumentParser constructor. HelpFormatter is the default,
+        RawDescriptionHelpFormatter# -*- Mode: Python; tab-width: 4 -*-
+#       Id: asynchat.py,v 2.26 2000/09/07 22:29:26 rushing Exp
+#       Author: Sam Rushing <rushing@nightmare.com>
+
+# ======================================================================
+# Copyright 1996 by Sam Rushing
+#
+#                         All Rights Reserved
+#
+# Permission to use, copy, modify, and distribute this software and
+# its documentation for any purpose and without fee is hereby
+# granted, provided that the above copyright notice appear in all
+# copies and that both that copyright notice and this permission
+# notice appear in supporting documentation, and that the name of Sam
+# Rushing not be used in advertising or publicity pertaining to
+# distribution of the software without specific, written prior
+# permission.
+#
+# SAM RUSHING DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE,
+# INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS, IN
+# NO EVENT SHALL SAM RUSHING BE LIABLE FOR ANY SPECIAL, INDIRECT OR
+# CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS
+# OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT,
+# NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
+# CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+# ======================================================================
+
+r"""A class supporting chat-style (command/response) protocols.
+
+This class adds support for 'chat' style protocols - where one side
+sends a 'command', and the other sends a response (examples would be
+the common internet protocols - smtp, nntp, ftp, etc..).
+
+The handle_read() method looks at the input stream for the current
+'terminator' (usually '\r\n' for single-line responses, '\r\n.\r\n'
+for multi-line output), calling self.found_terminator() on its
+receipt.
+
+for example:
+Say you build an async nntp client using this class.  At the start
+of the connection, you'll have self.terminator set to '\r\n', in
+order to process the single-line greeting.  Just before issuing a
+'LIST' command you'll set it to '\r\n.\r\n'.  The output of the LIST
+command will be accumulated (using your own 'collect_incoming_data'
+method) up to the terminator, and then control will be returned to
+you - by calling your self.found_terminator() method.
+"""
+import asyncore
+from collections import deque
+
+from warnings import _deprecated
+
+_DEPRECATION_MSG = ('The {name} module is deprecated and will be removed in '
+                    'Python {remove}. The recommended replacement is asyncio')
+_depreca#! /usr/bin/env python3
+
+"""Base16, Base32, Base64 (RFC 3548), Base85 and Ascii85 data encodings"""
+
+# Modified 04-Oct-1995 by Jack Jansen to use binascii module
+# Modified 30-Dec-2003 by Barry Warsaw to add full RFC 3548 support
+# Modified 22-May-2007 by Guido van Rossum to use bytes everywhere
+
+import re
+import struct
+import binascii
+
+
+__all__ = [
+    # Legacy interface exports traditional RFC 2045 Base64 encodings
+    'encode', 'decode', 'encodebytes', 'decodebytes',
+    # Generalized interface for other encodings
+    'b64encode', 'b64decode', 'b32encode', 'b32decode',
+    'b32hexencode', 'b32hexdecode', 'b16encode', 'b16decode',
+    # Base85 and Ascii85 encodings
+    'b85encode', 'b85decode', 'a85encode', 'a85decode',
+    # Standard Base64 encoding
+    'standard_b64encode', 'standard_b64decode',
+    # Some common Base64 alternatives.  As referenced by RFC 3458, see thread
+    # starting at:
+    #
+    # http://zgp.org/pipermail/p2p-hackers/2001-September/000316.html
+    'urlsafe_b64encode', 'urlsafe_b64decode',
+    ]
+
+
+bytes_types = (bytes, bytearray)  # Types acceptable as binary data
+
+def _bytes_from_decode_data(s):
+    if isinstance(s, str):
+        try:
+            return s.encode('ascii')
+        except UnicodeEncodeError:
+            raise ValueError('string argument should contain only ASCII characters')
+    if isinstance(s, bytes_types):
+        return s
+    try:
+        return memoryview(s).tobytes()
+    except TypeError:
+        raise TypeError("argument should be a bytes-like object or ASCII "
+                        "string, not %r" % s.__class__.__name__) from None
+
+
+# Base64 encoding/decoding uses binascii
+
+def b64encode(s, altchars=None):
+    """Encode the bytes-like object s using Base64 and return a bytes object.
+
+    Optional altchars should be a byte string of length 2 which specifies an
+    alternative alphabet for the '+' and '/' characters.  This allows an
+    application to e.g. generate url or filesystem safe Base64 strings.
+    """
+    encoded = binascii.b2a_base64(s, newline=False)
+    if altchars is not None:
+        assert len(altchars) == 2, repr(altchars)
+        return encoded.translate(bytes.maketrans(b'+/', altchars))
+    return encoded
+
+
+def b64decode(s, altchars=None, validate=False):
+    """Decode the Base64 encoded bytes-like object or ASCII string s.
+
+    Optional altchars must be a bytes-like object or ASCII string of length 2
+    which specifies the alternative alphabet used instead of the '+' and '/'
+    characte"""Bisection algorithms."""
+
+
+def insort_right(a, x, lo=0, hi=None, *, key=None):
+    """Insert item x in list a, and keep it sorted assuming a is sorted.
+
+    If x is already in a, insert it to the right of the rightmost x.
+
+    Optional args lo (default 0) and hi (default len(a)) bound the
+    slice of a to be searched.
+    """
+    if key is None:
+        lo = bisect_right(a, x, lo, hi)
+    else:
+        lo = bisect_right(a, key(x), lo, hi, key=key)
+    a.insert(lo, x)
+
+
+def bisect_right(a, x, lo=0, hi=None, *, key=None):
+    """Return the index where to insert item x in list a, assuming a is sorted.
+
+    The return value i is such that all e in a[:i] have e <= x, and all e in
+    a[i:] have e > x.  So if x already appears in the list, a.insert(i, x) will
+    insert just after the rightmost x already there.
+
+    Optional args lo (default 0) and hi (default len(a)) bound the
+    slice of a to be searched.
+    """
+
+    if lo < 0:
+        raise ValueError('lo must be non-negative')
+    if hi is None:
+        hi = len(a)
+    # Note, the comparison uses "<" to match the
+    # __lt__() logic in list.sort() and in heapq.
+    if key is None:
+        while lo < hi:
+            mid = (lo + hi) // 2
+            if x < a[mid]:
+                hi = mid
+            else:
+                lo = mid + 1
+    else:
+        while lo < hi:
+            mid = (lo + hi) // 2
+            if x < key(a[mid]):
+                hi = mid
+            else:
+                lo = mid + 1
+    return lo
+
+
+def insort_left(a, x, lo=0, hi=None, *, key=None):
+    """Insert item x in list a, and keep it sorted assuming a is sorted.
+
+    If x is already in a, insert it to the left of the leftmost x.
+
+    Optional args lo (default 0) and hi (default len(a)) bound the
+    slice of a to be searched.
+    """
+
+    if key is None:
+        lo = bisect_left(a, x, lo, hi)
+    else:
+        lo = bisect_left(a, key(x), lo, hi, key=key)
+    a.insert(lo, x)
+
+def bisect_left(a, x, lo=0, hi=None, *, key=None):
+    """Return the index where to insert item x in list a, assuming a is sorted.
+
+    The return value i is such that all e in a[:i] have e < x, and all e in
+    a[i:] have e >= x.  So if x already appears in the list, a.insert(i, x) will
+    insert just before the leftmost x already there.
+
+    Optional args lo (default 0) and hi (default len(a)) bound the
+    slice of a to be searched.
+    """
+
+    if lo < 0:
+        raise ValueError('lo must be non-negative')
+    if hi is None:
+        hi = len(a)
+    # #! /usr/bin/env python3
+
+"""Python interface for the 'lsprof' profiler.
+   Compatible with the 'profile' module.
+"""
+
+__all__ = ["run", "runctx", "Profile"]
+
+import _lsprof
+import io
+import profile as _pyprofile
+
+# ____________________________________________________________
+# Simple interface
+
+def run(statement, filename=None, sort=-1):
+    return _pyprofile._Utils(Profile).run(statement, filename, sort)
+
+def runctx(statement, globals, locals, filename=None, sort=-1):
+    return _pyprofile._Utils(Profile).runctx(statement, globals, locals,
+                                             filename, sort)
+
+run.__doc__ = _pyprofile.run.__doc__
+runctx.__doc__ = _pyprofile.runctx.__doc__
+
+# ____________________________________________________________
+
+class Profile(_lsprof.Profiler):
+    """Profile(timer=None, timeunit=None, subcalls=True, builtins=True)
+
+    Builds a profiler object using the specified timer function.
+    The default timer is a fast built-in one based on real time.
+    For custom timer functions returning integers, timeunit can
+    be a float specifying a scale (i.e. how long each integer unit
+    is, in seconds).
+    """
+
+    # Most of the functionality is in the base class.
+    # This subclass only adds convenient and backward-compatible methods.
+
+    def print_stats(self, sort=-1):
+        import pstats
+        pstats.Stats(self).strip_dirs().sort_stats(sort).print_stats()
+
+    def dump_stats(self, file):
+        import marshal
+        with open(file, 'wb') as f:
+            self.create_stats()
+            marshal.dump(self.stats, f)
+
+    def create_stats(self):
+        self.disable()
+        self.snapshot_stats()
+
+    def snapshot_stats(self):
+        entries = self.getstats()
+        self.stats = {}
+        callersdicts = {}
+        # call information
+        for entry in entries:
+            func = label(entry.code)
+            nc = entry.callcount         # ncalls column of pstats (before '/')
+            cc = nc - entry.reccallcount # ncalls column of pstats (after '/')
+            tt = entry.inlinetime        # tottime column of pstats
+            ct = entry.totaltime         # cumtime column of pstats
+            callers = {}
+            callersdicts[id(entry.code)] = callers
+            self.stats[func] = cc, nc, tt, ct, callers
+        # subcall information
+        for entry in entries:
+            if entry.calls:
+                func = label(entry.code)
+                for subentry in entry.calls:
+                    try:
+           #! /usr/local/bin/python
+
+# NOTE: the above "/usr/local/bin/python" is NOT a mistake.  It is
+# intentionally NOT "/usr/bin/env python".  On many systems
+# (e.g. Solaris), /usr/local/bin is not in $PATH as passed to CGI
+# scripts, and /usr/local/bin is the default directory where Python is
+# installed, so /usr/bin/env would be unable to find python.  Granted,
+# binary installations by Linux vendors often install Python in
+# /usr/bin.  So let those vendors patch cgi.py to match their choice
+# of installation.
+
+"""Support module for CGI (Common Gateway Interface) scripts.
+
+This module defines a number of utilities for use by CGI scripts
+written in Python.
+
+The global variable maxlen can be set to an integer indicating the maximum size
+of a POST request. POST requests larger than this size will result in a
+ValueError being raised during parsing. The default value of this variable is 0,
+meaning the request size is unlimited.
+"""
+
+# History
+# -------
+#
+# Michael McLay started this module.  Steve Majewski changed the
+# interface to SvFormContentDict and FormContentDict.  The multipart
+# parsing was inspired by code submitted by Andreas Paepcke.  Guido van
+# Rossum rewrote, reformatted and documented the module and is currently
+# responsible for its maintenance.
+#
+
+__version__ = "2.6"
+
+
+# Imports
+# =======
+
+from io import StringIO, BytesIO, TextIOWrapper
+from collections.abc import Mapping
+import sys
+import os
+import urllib.parse
+from email.parser import FeedParser
+from email.message import Message
+import html
+import locale
+import tempfile
+import warnings
+
+__all__ = ["MiniFieldStorage", "FieldStorage", "parse", "parse_multipart",
+           "parse_header", "test", "print_exception", "print_environ",
+           "print_form", "print_directory", "print_arguments",
+           "print_environ_usage"]
+
+
+warnings._deprecated(__name__, remove=(3,13))
+
+# Logging support
+# ===============
+
+logfile = ""            # Filename to log to, if not empty
+logfp = None            # File object to log to, if not None
+
+def initlog(*allargs):
+    """Write a log message, if there is a log file.
+
+    Even though this function is called initlog(), you should always
+    use log(); log is a variable that is set either to initlog
+    (initially), to dolog (once the log file has been opened), or to
+    nolog (when logging is disabled).
+
+    The first argument is a format string; the remaining arguments (if
+    any) are arguments to the % operator, so e.g.
+        log("%s: %s", "a", "b")
+    wi"""Simple class to read IFF chunks.
+
+An IFF chunk (used in formats such as AIFF, TIFF, RMFF (RealMedia File
+Format)) has the following structure:
+
++----------------+
+| ID (4 bytes)   |
++----------------+
+| size (4 bytes) |
++----------------+
+| data           |
+| ...            |
++----------------+
+
+The ID is a 4-byte string which identifies the type of chunk.
+
+The size field (a 32-bit value, encoded using big-endian byte order)
+gives the size of the whole chunk, including the 8-byte header.
+
+Usually an IFF-type file consists of one or more chunks.  The proposed
+usage of the Chunk class defined here is to instantiate an instance at
+the start of each chunk and read from the instance until it reaches
+the end, after which a new instance can be instantiated.  At the end
+of the file, creating a new instance will fail with an EOFError
+exception.
+
+Usage:
+while True:
+    try:
+        chunk = Chunk(file)
+    except EOFError:
+        break
+    chunktype = chunk.getname()
+    while True:
+        data = chunk.read(nbytes)
+        if not data:
+            pass
+        # do something with data
+
+The interface is file-like.  The implemented methods are:
+read, close, seek, tell, isatty.
+Extra methods are: skip() (called by close, skips to the end of the chunk),
+getname() (returns the name (ID) of the chunk)
+
+The __init__ method has one required argument, a file-like object
+(including a chunk instance), and one optional argument, a flag which
+specifies whether or not chunks are aligned on 2-byte boundaries.  The
+default is 1, i.e. aligned.
+"""
+
+import warnings
+
+warnings._deprecated(__name__, remove=(3, 13))
+
+class Chunk:
+    def __init__(self, file, align=True, bigendian=True, inclheader=False):
+        import struct
+        self.closed = False
+        self.align = align      # whether to align to word (2-byte) boundaries
+        if bigendian:
+            strflag = '>'
+        else:
+            strflag = '<'
+        self.file = file
+        self.chunkname = file.read(4)
+        if len(self.chunkname) < 4:
+            raise EOFError
+        try:
+            self.chunksize = struct.unpack_from(strflag+'L', file.read(4))[0]
+        except struct.error:
+            raise EOFError from None
+        if inclheader:
+            self.chunksize = self.chunksize - 8 # subtract header
+        self.size_read = 0
+        try:
+            self.offset = self.file.tell()
+        except (AttributeError, OSError):
+            self.seekable = False
+        else:
+            self.seekable = True"""Utilities needed to emulate Python's interactive interpreter.
+
+"""
+
+# Inspired by similar code by Jeff Epler and Fredrik Lundh.
+
+
+import sys
+import traceback
+from codeop import CommandCompiler, compile_command
+
+__all__ = ["InteractiveInterpreter", "InteractiveConsole", "interact",
+           "compile_command"]
+
+class InteractiveInterpreter:
+    """Base class for InteractiveConsole.
+
+    This class deals with parsing and interpreter state (the user's
+    namespace); it doesn't deal with input buffering or prompting or
+    input file naming (the filename is always passed in explicitly).
+
+    """
+
+    def __init__(self, locals=None):
+        """Constructor.
+
+        The optional 'locals' argument specifies the dictionary in
+        which code will be executed; it defaults to a newly created
+        dictionary with key "__name__" set to "__console__" and key
+        "__doc__" set to None.
+
+        """
+        if locals is None:
+            locals = {"__name__": "__console__", "__doc__": None}
+        self.locals = locals
+        self.compile = CommandCompiler()
+
+    def runsource(self, source, filename="<input>", symbol="single"):
+        """Compile and run some source in the interpreter.
+
+        Arguments are as for compile_command().
+
+        One of several things can happen:
+
+        1) The input is incorrect; compile_command() raised an
+        exception (SyntaxError or OverflowError).  A syntax traceback
+        will be printed by calling the showsyntaxerror() method.
+
+        2) The input is incomplete, and more input is required;
+        compile_command() returned None.  Nothing happens.
+
+        3) The input is complete; compile_command() returned a code
+        object.  The code is executed by calling self.runcode() (which
+        also handles run-time exceptions, except for SystemExit).
+
+        The return value is True in case 2, False in the other cases (unless
+        an exception is raised).  The return value can be used to
+        decide whether to use sys.ps1 or sys.ps2 to prompt the next
+        line.
+
+        """
+        try:
+            code = self.compile(source, filename, symbol)
+        except (OverflowError, SyntaxError, ValueError):
+            # Case 1
+            self.showsyntaxerror(filename)
+            return False
+
+        if code is None:
+            # Case 2
+            return True
+
+        # Case 3
+        self.runcode(code)
+        return False
+
+    def runcode(self, code):
+        """Execute a code object.
+
+        When ar"""Utilities to compile possibly incomplete Python source code.
+
+This module provides two interfaces, broadly similar to the builtin
+function compile(), which take program text, a filename and a 'mode'
+and:
+
+- Return code object if the command is complete and valid
+- Return None if the command is incomplete
+- Raise SyntaxError, ValueError or OverflowError if the command is a
+  syntax error (OverflowError and ValueError can be produced by
+  malformed literals).
+
+The two interfaces are:
+
+compile_command(source, filename, symbol):
+
+    Compiles a single command in the manner described above.
+
+CommandCompiler():
+
+    Instances of this class have __call__ methods identical in
+    signature to compile_command; the difference is that if the
+    instance compiles program text containing a __future__ statement,
+    the instance 'remembers' and compiles all subsequent program texts
+    with the statement in force.
+
+The module also provides another class:
+
+Compile():
+
+    Instances of this class act like the built-in function compile,
+    but with 'memory' in the sense described above.
+"""
+
+import __future__
+import warnings
+
+_features = [getattr(__future__, fname)
+             for fname in __future__.all_feature_names]
+
+__all__ = ["compile_command", "Compile", "CommandCompiler"]
+
+# The following flags match the values from Include/cpython/compile.h
+# Caveat emptor: These flags are undocumented on purpose and depending
+# on their effect outside the standard library is **unsupported**.
+PyCF_DONT_IMPLY_DEDENT = 0x200
+PyCF_ALLOW_INCOMPLETE_INPUT = 0x4000
+
+def _maybe_compile(compiler, source, filename, symbol):
+    # Check for source consisting of only blank lines and comments.
+    for line in source.split("\n"):
+        line = line.strip()
+        if line and line[0] != '#':
+            break               # Leave it alone.
+    else:
+        if symbol != "eval":
+            source = "pass"     # Replace it with a 'pass' statement
+
+    # Disable compiler warnings when checking for incomplete input.
+    with warnings.catch_warnings():
+        warnings.simplefilter("ignore", (SyntaxWarning, DeprecationWarning))
+        try:
+            compiler(source, filename, symbol)
+        except SyntaxError:  # Let other compile() errors propagate.
+            try:
+                compiler(source + "\n", filename, symbol)
+                return None
+            except SyntaxError as e:
+                if "incomplete input" in str(e):
+                    return None
+                # """Module/script to byte-compile all .py files to .pyc files.
+
+When called as a script with arguments, this compiles the directories
+given as arguments recursively; the -l option prevents it from
+recursing into directories.
+
+Without arguments, it compiles all modules on sys.path, without
+recursing into subdirectories.  (Even though it should do so for
+packages -- for now, you'll have to deal with packages separately.)
+
+See module py_compile for details of the actual byte-compilation.
+"""
+import os
+import sys
+import importlib.util
+import py_compile
+import struct
+import filecmp
+
+from functools import partial
+from pathlib import Path
+
+__all__ = ["compile_dir","compile_file","compile_path"]
+
+def _walk_dir(dir, maxlevels, quiet=0):
+    if quiet < 2 and isinstance(dir, os.PathLike):
+        dir = os.fspath(dir)
+    if not quiet:
+        print('Listing {!r}...'.format(dir))
+    try:
+        names = os.listdir(dir)
+    except OSError:
+        if quiet < 2:
+            print("Can't list {!r}".format(dir))
+        names = []
+    names.sort()
+    for name in names:
+        if name == '__pycache__':
+            continue
+        fullname = os.path.join(dir, name)
+        if not os.path.isdir(fullname):
+            yield fullname
+        elif (maxlevels > 0 and name != os.curdir and name != os.pardir and
+              os.path.isdir(fullname) and not os.path.islink(fullname)):
+            yield from _walk_dir(fullname, maxlevels=maxlevels - 1,
+                                 quiet=quiet)
+
+def compile_dir(dir, maxlevels=None, ddir=None, force=False,
+                rx=None, quiet=0, legacy=False, optimize=-1, workers=1,
+                invalidation_mode=None, *, stripdir=None,
+                prependdir=None, limit_sl_dest=None, hardlink_dupes=False):
+    """Byte-compile all modules in the given directory tree.
+
+    Arguments (only dir is required):
+
+    dir:       the directory to byte-compile
+    maxlevels: maximum recursion level (default `sys.getrecursionlimit()`)
+    ddir:      the directory that will be prepended to the path to the
+               file as it is compiled into each byte-code file.
+    force:     if True, force compilation, even if timestamps are up-to-date
+    quiet:     full output with False or 0, errors only with 1,
+               no output with 2
+    legacy:    if True, produce legacy pyc paths instead of PEP 3147 paths
+    optimize:  int or list of optimization levels or -1 for level of
+               the interpreter. Multiple levels leads to mul"""Utilities for with-statement contexts.  See PEP 343."""
+import abc
+import os
+import sys
+import _collections_abc
+from collections import deque
+from functools import wraps
+from types import MethodType, GenericAlias
+
+__all__ = ["asynccontextmanager", "contextmanager", "closing", "nullcontext",
+           "AbstractContextManager", "AbstractAsyncContextManager",
+           "AsyncExitStack", "ContextDecorator", "ExitStack",
+           "redirect_stdout", "redirect_stderr", "suppress", "aclosing",
+           "chdir"]
+
+
+class AbstractContextManager(abc.ABC):
+
+    """An abstract base class for context managers."""
+
+    __class_getitem__ = classmethod(GenericAlias)
+
+    def __enter__(self):
+        """Return `self` upon entering the runtime context."""
+        return self
+
+    @abc.abstractmethod
+    def __exit__(self, exc_type, exc_value, traceback):
+        """Raise any exception triggered within the runtime context."""
+        return None
+
+    @classmethod
+    def __subclasshook__(cls, C):
+        if cls is AbstractContextManager:
+            return _collections_abc._check_methods(C, "__enter__", "__exit__")
+        return NotImplemented
+
+
+class AbstractAsyncContextManager(abc.ABC):
+
+    """An abstract base class for asynchronous context managers."""
+
+    __class_getitem__ = classmethod(GenericAlias)
+
+    async def __aenter__(self):
+        """Return `self` upon entering the runtime context."""
+        return self
+
+    @abc.abstractmethod
+    async def __aexit__(self, exc_type, exc_value, traceback):
+        """Raise any exception triggered within the runtime context."""
+        return None
+
+    @classmethod
+    def __subclasshook__(cls, C):
+        if cls is AbstractAsyncContextManager:
+            return _collections_abc._check_methods(C, "__aenter__",
+                                                   "__aexit__")
+        return NotImplemented
+
+
+class ContextDecorator(object):
+    "A base class or mixin that enables context managers to work as decorators."
+
+    def _recreate_cm(self):
+        """Return a recreated instance of self.
+
+        Allows an otherwise one-shot context manager like
+        _GeneratorContextManager to support use as
+        a decorator via implicit recreation.
+
+        This is a private interface just for _GeneratorContextManager.
+        See issue #11647 for details.
+        """
+        return self
+
+    def __call__(self, func):
+        @wraps(func)
+        def inner(*args, **kwds):
+            with self._recreate_cm():
+             """Generic (shallow and deep) copying operations.
+
+Interface summary:
+
+        import copy
+
+        x = copy.copy(y)        # make a shallow copy of y
+        x = copy.deepcopy(y)    # make a deep copy of y
+
+For module specific errors, copy.Error is raised.
+
+The difference between shallow and deep copying is only relevant for
+compound objects (objects that contain other objects, like lists or
+class instances).
+
+- A shallow copy constructs a new compound object and then (to the
+  extent possible) inserts *the same objects* into it that the
+  original contains.
+
+- A deep copy constructs a new compound object and then, recursively,
+  inserts *copies* into it of the objects found in the original.
+
+Two problems often exist with deep copy operations that don't exist
+with shallow copy operations:
+
+ a) recursive objects (compound objects that, directly or indirectly,
+    contain a reference to themselves) may cause a recursive loop
+
+ b) because deep copy copies *everything* it may copy too much, e.g.
+    administrative data structures that should be shared even between
+    copies
+
+Python's deep copy operation avoids these problems by:
+
+ a) keeping a table of objects already copied during the current
+    copying pass
+
+ b) letting user-defined classes override the copying operation or the
+    set of components copied
+
+This version does not copy types like module, class, function, method,
+nor stack trace, stack frame, nor file, socket, window, nor any
+similar types.
+
+Classes can use the same interfaces to control copying that they use
+to control pickling: they can define methods called __getinitargs__(),
+__getstate__() and __setstate__().  See the documentation for module
+"pickle" for information on these methods.
+"""
+
+import types
+import weakref
+from copyreg import dispatch_table
+
+class Error(Exception):
+    pass
+error = Error   # backward compatibility
+
+try:
+    from org.python.core import PyStringMap
+except ImportError:
+    PyStringMap = None
+
+__all__ = ["Error", "copy", "deepcopy"]
+
+def copy(x):
+    """Shallow copy operation on arbitrary Python objects.
+
+    See the module's __doc__ string for more info.
+    """
+
+    cls = type(x)
+
+    copier = _copy_dispatch.get(cls)
+    if copier:
+        return copier(x)
+
+    if issubclass(cls, type):
+        # treat it as a regular class:
+        return _copy_immutable(x)
+
+    copier = getattr(cls, "__copy__", None)
+    if copier is not None:
+        return copier(x)
+
+    reductor = dispatch_table.get(cls)
+    if reductor is """Wrapper to the POSIX crypt library call and associated functionality."""
+
+import sys as _sys
+
+try:
+    import _crypt
+except ModuleNotFoundError:
+    if _sys.platform == 'win32':
+        raise ImportError("The crypt module is not supported on Windows")
+    else:
+        raise ImportError("The required _crypt module was not built as part of CPython")
+
+import errno
+import string as _string
+import warnings
+from random import SystemRandom as _SystemRandom
+from collections import namedtuple as _namedtuple
+
+
+warnings._deprecated(__name__, remove=(3, 13))
+
+
+_saltchars = _string.ascii_letters + _string.digits + './'
+_sr = _SystemRandom()
+
+
+class _Method(_namedtuple('_Method', 'name ident salt_chars total_size')):
+
+    """Class representing a salt method per the Modular Crypt Format or the
+    legacy 2-character crypt method."""
+
+    def __repr__(self):
+        return '<crypt.METHOD_{}>'.format(self.name)
+
+
+def mksalt(method=None, *, rounds=None):
+    """Generate a salt for the specified method.
+
+    If not specified, the strongest available method will be used.
+
+    """
+    if method is None:
+        method = methods[0]
+    if rounds is not None and not isinstance(rounds, int):
+        raise TypeError(f'{rounds.__class__.__name__} object cannot be '
+                        f'interpreted as an integer')
+    if not method.ident:  # traditional
+        s = ''
+    else:  # modular
+        s = f'${method.ident}$'
+
+    if method.ident and method.ident[0] == '2':  # Blowfish variants
+        if rounds is None:
+            log_rounds = 12
+        else:
+            log_rounds = int.bit_length(rounds-1)
+            if rounds != 1 << log_rounds:
+                raise ValueError('rounds must be a power of 2')
+            if not 4 <= log_rounds <= 31:
+                raise ValueError('rounds out of the range 2**4 to 2**31')
+        s += f'{log_rounds:02d}$'
+    elif method.ident in ('5', '6'):  # SHA-2
+        if rounds is not None:
+            if not 1000 <= rounds <= 999_999_999:
+                raise ValueError('rounds out of the range 1000 to 999_999_999')
+            s += f'rounds={rounds}$'
+    elif rounds is not None:
+        raise ValueError(f"{method} doesn't support the rounds argument")
+
+    s += ''.join(_sr.choice(_saltchars) for char in range(method.salt_chars))
+    return s
+
+
+def crypt(word, salt=None):
+    """Return a string representing the one-way hash of a password, with a salt
+    prepended.
+
+    If ``salt`` is not specified or is ``None``, the strongest
+ import re
+import sys
+import copy
+import types
+import inspect
+import keyword
+import builtins
+import functools
+import itertools
+import abc
+import _thread
+from types import FunctionType, GenericAlias
+
+
+__all__ = ['dataclass',
+           'field',
+           'Field',
+           'FrozenInstanceError',
+           'InitVar',
+           'KW_ONLY',
+           'MISSING',
+
+           # Helper functions.
+           'fields',
+           'asdict',
+           'astuple',
+           'make_dataclass',
+           'replace',
+           'is_dataclass',
+           ]
+
+# Conditions for adding methods.  The boxes indicate what action the
+# dataclass decorator takes.  For all of these tables, when I talk
+# about init=, repr=, eq=, order=, unsafe_hash=, or frozen=, I'm
+# referring to the arguments to the @dataclass decorator.  When
+# checking if a dunder method already exists, I mean check for an
+# entry in the class's __dict__.  I never check to see if an attribute
+# is defined in a base class.
+
+# Key:
+# +=========+=========================================+
+# + Value   | Meaning                                 |
+# +=========+=========================================+
+# | <blank> | No action: no method is added.          |
+# +---------+-----------------------------------------+
+# | add     | Generated method is added.              |
+# +---------+-----------------------------------------+
+# | raise   | TypeError is raised.                    |
+# +---------+-----------------------------------------+
+# | None    | Attribute is set to None.               |
+# +=========+=========================================+
+
+# __init__
+#
+#   +--- init= parameter
+#   |
+#   v     |       |       |
+#         |  no   |  yes  |  <--- class has __init__ in __dict__?
+# +=======+=======+=======+
+# | False |       |       |
+# +-------+-------+-------+
+# | True  | add   |       |  <- the default
+# +=======+=======+=======+
+
+# __repr__
+#
+#    +--- repr= parameter
+#    |
+#    v    |       |       |
+#         |  no   |  yes  |  <--- class has __repr__ in __dict__?
+# +=======+=======+=======+
+# | False |       |       |
+# +-------+-------+-------+
+# | True  | add   |       |  <- the default
+# +=======+=======+=======+
+
+
+# __setattr__
+# __delattr__
+#
+#    +--- frozen= parameter
+#    |
+#    v    |       |       |
+#         |  no   |  yes  |  <--- class has __setattr__ or __delattr__ in __dict__?
+# +=======+=======+=======+
+# | False |       |       |  <- the default
+# +-------+-------+-------+
+# | True  | add   | ra
+try:
+    from _decimal import *
+    from _decimal import __doc__
+    from _decimal import __version__
+    from _decimal import __libmpdec_version__
+except ImportError:
+    from _pydecimal import *
+    from _pydecimal import __doc__
+    from _pydecimal import __version__
+    from _pydecimal import __libmpdec_version__
+"""Disassembler of Python byte code into mnemonics."""
+
+import sys
+import types
+import collections
+import io
+
+from opcode import *
+from opcode import (
+    __all__ as _opcodes_all,
+    _cache_format,
+    _inline_cache_entries,
+    _nb_ops,
+    _specializations,
+    _specialized_instructions,
+)
+
+__all__ = ["code_info", "dis", "disassemble", "distb", "disco",
+           "findlinestarts", "findlabels", "show_code",
+           "get_instructions", "Instruction", "Bytecode"] + _opcodes_all
+del _opcodes_all
+
+_have_code = (types.MethodType, types.FunctionType, types.CodeType,
+              classmethod, staticmethod, type)
+
+FORMAT_VALUE = opmap['FORMAT_VALUE']
+FORMAT_VALUE_CONVERTERS = (
+    (None, ''),
+    (str, 'str'),
+    (repr, 'repr'),
+    (ascii, 'ascii'),
+)
+MAKE_FUNCTION = opmap['MAKE_FUNCTION']
+MAKE_FUNCTION_FLAGS = ('defaults', 'kwdefaults', 'annotations', 'closure')
+
+LOAD_CONST = opmap['LOAD_CONST']
+LOAD_GLOBAL = opmap['LOAD_GLOBAL']
+BINARY_OP = opmap['BINARY_OP']
+JUMP_BACKWARD = opmap['JUMP_BACKWARD']
+
+CACHE = opmap["CACHE"]
+
+_all_opname = list(opname)
+_all_opmap = dict(opmap)
+_empty_slot = [slot for slot, name in enumerate(_all_opname) if name.startswith("<")]
+for spec_op, specialized in zip(_empty_slot, _specialized_instructions):
+    # fill opname and opmap
+    _all_opname[spec_op] = specialized
+    _all_opmap[specialized] = spec_op
+
+deoptmap = {
+    specialized: base for base, family in _specializations.items() for specialized in family
+}
+
+def _try_compile(source, name):
+    """Attempts to compile the given source, first as an expression and
+       then as a statement if the first approach fails.
+
+       Utility function to accept strings in functions that otherwise
+       expect code objects
+    """
+    try:
+        c = compile(source, name, 'eval')
+    except SyntaxError:
+        c = compile(source, name, 'exec')
+    return c
+
+def dis(x=None, *, file=None, depth=None, show_caches=False, adaptive=False):
+    """Disassemble classes, methods, functions, and other compiled objects.
+
+    With no argument, disassemble the last traceback.
+
+    Compiled objects currently include generator objects, async generator
+    objects, and coroutine objects, all of which store their code object
+    in a special attribute.
+    """
+    if x is None:
+        distb(file=file, show_caches=show_caches, adaptive=adaptive)
+        return
+    # Extract functions from methods.
+    if hasattr(x, '__func__'):
+        x = x.__func__
+    # Extract compiled code objects from...
+  import sys
+import builtins as bltns
+from types import MappingProxyType, DynamicClassAttribute
+from operator import or_ as _or_
+from functools import reduce
+
+
+__all__ = [
+        'EnumType', 'EnumMeta',
+        'Enum', 'IntEnum', 'StrEnum', 'Flag', 'IntFlag', 'ReprEnum',
+        'auto', 'unique', 'property', 'verify', 'member', 'nonmember',
+        'FlagBoundary', 'STRICT', 'CONFORM', 'EJECT', 'KEEP',
+        'global_flag_repr', 'global_enum_repr', 'global_str', 'global_enum',
+        'EnumCheck', 'CONTINUOUS', 'NAMED_FLAGS', 'UNIQUE',
+        'pickle_by_global_name', 'pickle_by_enum_name',
+        ]
+
+
+# Dummy value for Enum and Flag as there are explicit checks for them
+# before they have been created.
+# This is also why there are checks in EnumType like `if Enum is not None`
+Enum = Flag = EJECT = _stdlib_enums = ReprEnum = None
+
+class nonmember(object):
+    """
+    Protects item from becoming an Enum member during class creation.
+    """
+    def __init__(self, value):
+        self.value = value
+
+class member(object):
+    """
+    Forces item to become an Enum member during class creation.
+    """
+    def __init__(self, value):
+        self.value = value
+
+def _is_descriptor(obj):
+    """
+    Returns True if obj is a descriptor, False otherwise.
+    """
+    return (
+            hasattr(obj, '__get__') or
+            hasattr(obj, '__set__') or
+            hasattr(obj, '__delete__')
+            )
+
+def _is_dunder(name):
+    """
+    Returns True if a __dunder__ name, False otherwise.
+    """
+    return (
+            len(name) > 4 and
+            name[:2] == name[-2:] == '__' and
+            name[2] != '_' and
+            name[-3] != '_'
+            )
+
+def _is_sunder(name):
+    """
+    Returns True if a _sunder_ name, False otherwise.
+    """
+    return (
+            len(name) > 2 and
+            name[0] == name[-1] == '_' and
+            name[1:2] != '_' and
+            name[-2:-1] != '_'
+            )
+
+def _is_internal_class(cls_name, obj):
+    # do not use `re` as `re` imports `enum`
+    if not isinstance(obj, type):
+        return False
+    qualname = getattr(obj, '__qualname__', '')
+    s_pattern = cls_name + '.' + getattr(obj, '__name__', '')
+    e_pattern = '.' + s_pattern
+    return qualname == s_pattern or qualname.endswith(e_pattern)
+
+def _is_private(cls_name, name):
+    # do not use `re` as `re` imports `enum`
+    pattern = '_%s__' % (cls_name, )
+    pat_len = len(pattern)
+    if (
+            len(name) > pat_len
+            and name.startswith(pattern"""Helper class to quickly write a loop over all standard input files.
+
+Typical use is:
+
+    import fileinput
+    for line in fileinput.input(encoding="utf-8"):
+        process(line)
+
+This iterates over the lines of all files listed in sys.argv[1:],
+defaulting to sys.stdin if the list is empty.  If a filename is '-' it
+is also replaced by sys.stdin and the optional arguments mode and
+openhook are ignored.  To specify an alternative list of filenames,
+pass it as the argument to input().  A single file name is also allowed.
+
+Functions filename(), lineno() return the filename and cumulative line
+number of the line that has just been read; filelineno() returns its
+line number in the current file; isfirstline() returns true iff the
+line just read is the first line of its file; isstdin() returns true
+iff the line was read from sys.stdin.  Function nextfile() closes the
+current file so that the next iteration will read the first line from
+the next file (if any); lines not read from the file will not count
+towards the cumulative line count; the filename is not changed until
+after the first line of the next file has been read.  Function close()
+closes the sequence.
+
+Before any lines have been read, filename() returns None and both line
+numbers are zero; nextfile() has no effect.  After all lines have been
+read, filename() and the line number functions return the values
+pertaining to the last line read; nextfile() has no effect.
+
+All files are opened in text mode by default, you can override this by
+setting the mode parameter to input() or FileInput.__init__().
+If an I/O error occurs during opening or reading a file, the OSError
+exception is raised.
+
+If sys.stdin is used more than once, the second and further use will
+return no lines, except perhaps for interactive use, or if it has been
+explicitly reset (e.g. using sys.stdin.seek(0)).
+
+Empty files are opened and immediately closed; the only time their
+presence in the list of filenames is noticeable at all is when the
+last file opened is empty.
+
+It is possible that the last line of a file doesn't end in a newline
+character; otherwise lines are returned including the trailing
+newline.
+
+Class FileInput is the implementation; its methods filename(),
+lineno(), fileline(), isfirstline(), isstdin(), nextfile() and close()
+correspond to the functions in the module.  In addition it has a
+readline() method which returns the next input line, and a
+__getitem__() method which implements the sequence behavior.  The
+sequence must# Originally contributed by Sjoerd Mullender.
+# Significantly modified by Jeffrey Yasskin <jyasskin at gmail.com>.
+
+"""Fraction, infinite-precision, rational numbers."""
+
+from decimal import Decimal
+import math
+import numbers
+import operator
+import re
+import sys
+
+__all__ = ['Fraction']
+
+
+# Constants related to the hash implementation;  hash(x) is based
+# on the reduction of x modulo the prime _PyHASH_MODULUS.
+_PyHASH_MODULUS = sys.hash_info.modulus
+# Value to be used for rationals that reduce to infinity modulo
+# _PyHASH_MODULUS.
+_PyHASH_INF = sys.hash_info.inf
+
+_RATIONAL_FORMAT = re.compile(r"""
+    \A\s*                                  # optional whitespace at the start,
+    (?P<sign>[-+]?)                        # an optional sign, then
+    (?=\d|\.\d)                            # lookahead for digit or .digit
+    (?P<num>\d*|\d+(_\d+)*)                # numerator (possibly empty)
+    (?:                                    # followed by
+       (?:/(?P<denom>\d+(_\d+)*))?         # an optional denominator
+    |                                      # or
+       (?:\.(?P<decimal>\d*|\d+(_\d+)*))?  # an optional fractional part
+       (?:E(?P<exp>[-+]?\d+(_\d+)*))?      # and optional exponent
+    )
+    \s*\Z                                  # and optional whitespace to finish
+""", re.VERBOSE | re.IGNORECASE)
+
+
+class Fraction(numbers.Rational):
+    """This class implements rational numbers.
+
+    In the two-argument form of the constructor, Fraction(8, 6) will
+    produce a rational number equivalent to 4/3. Both arguments must
+    be Rational. The numerator defaults to 0 and the denominator
+    defaults to 1 so that Fraction(3) == 3 and Fraction() == 0.
+
+    Fractions can also be constructed from:
+
+      - numeric strings similar to those accepted by the
+        float constructor (for example, '-2.3' or '1e10')
+
+      - strings of the form '123/456'
+
+      - float and Decimal instances
+
+      - other Rational instances (including integers)
+
+    """
+
+    __slots__ = ('_numerator', '_denominator')
+
+    # We're immutable, so use __new__ not __init__
+    def __new__(cls, numerator=0, denominator=None, *, _normalize=True):
+        """Constructs a Rational.
+
+        Takes a string like '3/2' or '1.5', another Rational instance, a
+        numerator/denominator pair, or a float.
+
+        Examples
+        --------
+
+        >>> Fraction(10, -8)
+        Fraction(-5, 4)
+        >>> Fraction(Fraction(1, 7), 5)
+        Fraction(1, 35)
+        >>> Fraction(Fraction(1, 7),"""functools.py - Tools for working with functions and callable objects
+"""
+# Python module wrapper for _functools C module
+# to allow utilities written in Python to be added
+# to the functools module.
+# Written by Nick Coghlan <ncoghlan at gmail.com>,
+# Raymond Hettinger <python at rcn.com>,
+# and Łukasz Langa <lukasz at langa.pl>.
+#   Copyright (C) 2006-2013 Python Software Foundation.
+# See C source code for _functools credits/copyright
+
+__all__ = ['update_wrapper', 'wraps', 'WRAPPER_ASSIGNMENTS', 'WRAPPER_UPDATES',
+           'total_ordering', 'cache', 'cmp_to_key', 'lru_cache', 'reduce',
+           'partial', 'partialmethod', 'singledispatch', 'singledispatchmethod',
+           'cached_property']
+
+from abc import get_cache_token
+from collections import namedtuple
+# import types, weakref  # Deferred to single_dispatch()
+from reprlib import recursive_repr
+from _thread import RLock
+from types import GenericAlias
+
+
+################################################################################
+### update_wrapper() and wraps() decorator
+################################################################################
+
+# update_wrapper() and wraps() are tools to help write
+# wrapper functions that can handle naive introspection
+
+WRAPPER_ASSIGNMENTS = ('__module__', '__name__', '__qualname__', '__doc__',
+                       '__annotations__')
+WRAPPER_UPDATES = ('__dict__',)
+def update_wrapper(wrapper,
+                   wrapped,
+                   assigned = WRAPPER_ASSIGNMENTS,
+                   updated = WRAPPER_UPDATES):
+    """Update a wrapper function to look like the wrapped function
+
+       wrapper is the function to be updated
+       wrapped is the original function
+       assigned is a tuple naming the attributes assigned directly
+       from the wrapped function to the wrapper function (defaults to
+       functools.WRAPPER_ASSIGNMENTS)
+       updated is a tuple naming the attributes of the wrapper that
+       are updated with the corresponding attribute from the wrapped
+       function (defaults to functools.WRAPPER_UPDATES)
+    """
+    for attr in assigned:
+        try:
+            value = getattr(wrapped, attr)
+        except AttributeError:
+            pass
+        else:
+            setattr(wrapper, attr, value)
+    for attr in updated:
+        getattr(wrapper, attr).update(getattr(wrapped, attr, {}))
+    # Issue #17482: set __wrapped__ last so we don't inadvertently copy it
+    # from the wrapped function when updating __dict__
+    wrapper."""Parser for command line options.
+
+This module helps scripts to parse the command line arguments in
+sys.argv.  It supports the same conventions as the Unix getopt()
+function (including the special meanings of arguments of the form `-'
+and `--').  Long options similar to those supported by GNU software
+may be used as well via an optional third argument.  This module
+provides two functions and an exception:
+
+getopt() -- Parse command line options
+gnu_getopt() -- Like getopt(), but allow option and non-option arguments
+to be intermixed.
+GetoptError -- exception (class) raised with 'opt' attribute, which is the
+option involved with the exception.
+"""
+
+# Long option support added by Lars Wirzenius <liw@iki.fi>.
+#
+# Gerrit Holl <gerrit@nl.linux.org> moved the string-based exceptions
+# to class-based exceptions.
+#
+# Peter Åstrand <astrand@lysator.liu.se> added gnu_getopt().
+#
+# TODO for gnu_getopt():
+#
+# - GNU getopt_long_only mechanism
+# - allow the caller to specify ordering
+# - RETURN_IN_ORDER option
+# - GNU extension with '-' as first character of option string
+# - optional arguments, specified by double colons
+# - an option string with a W followed by semicolon should
+#   treat "-W foo" as "--foo"
+
+__all__ = ["GetoptError","error","getopt","gnu_getopt"]
+
+import os
+try:
+    from gettext import gettext as _
+except ImportError:
+    # Bootstrapping Python: gettext's dependencies not built yet
+    def _(s): return s
+
+class GetoptError(Exception):
+    opt = ''
+    msg = ''
+    def __init__(self, msg, opt=''):
+        self.msg = msg
+        self.opt = opt
+        Exception.__init__(self, msg, opt)
+
+    def __str__(self):
+        return self.msg
+
+error = GetoptError # backward compatibility
+
+def getopt(args, shortopts, longopts = []):
+    """getopt(args, options[, long_options]) -> opts, args
+
+    Parses command line options and parameter list.  args is the
+    argument list to be parsed, without the leading reference to the
+    running program.  Typically, this means "sys.argv[1:]".  shortopts
+    is the string of option letters that the script wants to
+    recognize, with options that require an argument followed by a
+    colon (i.e., the same format that Unix getopt() uses).  If
+    specified, longopts is a list of strings with the names of the
+    long options which should be supported.  The leading '--'
+    characters should not be included in the option name.  Options
+    which require an argument should be followed by an equal sign
+    ('=').
+
+    The retur"""Internationalization and localization support.
+
+This module provides internationalization (I18N) and localization (L10N)
+support for your Python programs by providing an interface to the GNU gettext
+message catalog library.
+
+I18N refers to the operation by which a program is made aware of multiple
+languages.  L10N refers to the adaptation of your program, once
+internationalized, to the local language and cultural habits.
+
+"""
+
+# This module represents the integration of work, contributions, feedback, and
+# suggestions from the following people:
+#
+# Martin von Loewis, who wrote the initial implementation of the underlying
+# C-based libintlmodule (later renamed _gettext), along with a skeletal
+# gettext.py implementation.
+#
+# Peter Funk, who wrote fintl.py, a fairly complete wrapper around intlmodule,
+# which also included a pure-Python implementation to read .mo files if
+# intlmodule wasn't available.
+#
+# James Henstridge, who also wrote a gettext.py module, which has some
+# interesting, but currently unsupported experimental features: the notion of
+# a Catalog class and instances, and the ability to add to a catalog file via
+# a Python API.
+#
+# Barry Warsaw integrated these modules, wrote the .install() API and code,
+# and conformed all C and Python code to Python's coding standards.
+#
+# Francois Pinard and Marc-Andre Lemburg also contributed valuably to this
+# module.
+#
+# J. David Ibanez implemented plural forms. Bruno Haible fixed some bugs.
+#
+# TODO:
+# - Lazy loading of .mo files.  Currently the entire catalog is loaded into
+#   memory, but that's probably bad for large translated programs.  Instead,
+#   the lexical sort of original strings in GNU .mo files should be exploited
+#   to do binary searches and lazy initializations.  Or you might want to use
+#   the undocumented double-hash algorithm for .mo files with hash tables, but
+#   you'll need to study the GNU gettext code to do this.
+#
+# - Support Solaris .mo file formats.  Unfortunately, we've been unable to
+#   find this format documented anywhere.
+
+
+import operator
+import os
+import re
+import sys
+
+
+__all__ = ['NullTranslations', 'GNUTranslations', 'Catalog',
+           'bindtextdomain', 'find', 'translation', 'install',
+           'textdomain', 'dgettext', 'dngettext', 'gettext',
+           'ngettext', 'pgettext', 'dpgettext', 'npgettext',
+           'dnpgettext'
+           ]
+
+_default_localedir = os.path.join(sys.base_prefix, 'share', 'locale')
+
+# Expression parsing for plural form selection.
+from types import GenericAlias
+
+__all__ = ["TopologicalSorter", "CycleError"]
+
+_NODE_OUT = -1
+_NODE_DONE = -2
+
+
+class _NodeInfo:
+    __slots__ = "node", "npredecessors", "successors"
+
+    def __init__(self, node):
+        # The node this class is augmenting.
+        self.node = node
+
+        # Number of predecessors, generally >= 0. When this value falls to 0,
+        # and is returned by get_ready(), this is set to _NODE_OUT and when the
+        # node is marked done by a call to done(), set to _NODE_DONE.
+        self.npredecessors = 0
+
+        # List of successor nodes. The list can contain duplicated elements as
+        # long as they're all reflected in the successor's npredecessors attribute.
+        self.successors = []
+
+
+class CycleError(ValueError):
+    """Subclass of ValueError raised by TopologicalSorter.prepare if cycles
+    exist in the working graph.
+
+    If multiple cycles exist, only one undefined choice among them will be reported
+    and included in the exception. The detected cycle can be accessed via the second
+    element in the *args* attribute of the exception instance and consists in a list
+    of nodes, such that each node is, in the graph, an immediate predecessor of the
+    next node in the list. In the reported list, the first and the last node will be
+    the same, to make it clear that it is cyclic.
+    """
+
+    pass
+
+
+class TopologicalSorter:
+    """Provides functionality to topologically sort a graph of hashable nodes"""
+
+    def __init__(self, graph=None):
+        self._node2info = {}
+        self._ready_nodes = None
+        self._npassedout = 0
+        self._nfinished = 0
+
+        if graph is not None:
+            for node, predecessors in graph.items():
+                self.add(node, *predecessors)
+
+    def _get_nodeinfo(self, node):
+        if (result := self._node2info.get(node)) is None:
+            self._node2info[node] = result = _NodeInfo(node)
+        return result
+
+    def add(self, node, *predecessors):
+        """Add a new node and its predecessors to the graph.
+
+        Both the *node* and all elements in *predecessors* must be hashable.
+
+        If called multiple times with the same node argument, the set of dependencies
+        will be the union of all dependencies passed in.
+
+        It is possible to add a node with no dependencies (*predecessors* is not provided)
+        as well as provide a dependency twice. If a node that has not been provided before
+        is included among *predecessors* it will be a#.  Copyright (C) 2005-2010   Gregory P. Smith (greg@krypto.org)
+#  Licensed to PSF under a Contributor Agreement.
+#
+
+__doc__ = """hashlib module - A common interface to many hash functions.
+
+new(name, data=b'', **kwargs) - returns a new hash object implementing the
+                                given hash function; initializing the hash
+                                using the given binary data.
+
+Named constructor functions are also available, these are faster
+than using new(name):
+
+md5(), sha1(), sha224(), sha256(), sha384(), sha512(), blake2b(), blake2s(),
+sha3_224, sha3_256, sha3_384, sha3_512, shake_128, and shake_256.
+
+More algorithms may be available on your platform but the above are guaranteed
+to exist.  See the algorithms_guaranteed and algorithms_available attributes
+to find out what algorithm names can be passed to new().
+
+NOTE: If you want the adler32 or crc32 hash functions they are available in
+the zlib module.
+
+Choose your hash function wisely.  Some have known collision weaknesses.
+sha384 and sha512 will be slow on 32 bit platforms.
+
+Hash objects have these methods:
+ - update(data): Update the hash object with the bytes in data. Repeated calls
+                 are equivalent to a single call with the concatenation of all
+                 the arguments.
+ - digest():     Return the digest of the bytes passed to the update() method
+                 so far as a bytes object.
+ - hexdigest():  Like digest() except the digest is returned as a string
+                 of double length, containing only hexadecimal digits.
+ - copy():       Return a copy (clone) of the hash object. This can be used to
+                 efficiently compute the digests of datas that share a common
+                 initial substring.
+
+For example, to obtain the digest of the byte string 'Nobody inspects the
+spammish repetition':
+
+    >>> import hashlib
+    >>> m = hashlib.md5()
+    >>> m.update(b"Nobody inspects")
+    >>> m.update(b" the spammish repetition")
+    >>> m.digest()
+    b'\\xbbd\\x9c\\x83\\xdd\\x1e\\xa5\\xc9\\xd9\\xde\\xc9\\xa1\\x8d\\xf0\\xff\\xe9'
+
+More condensed:
+
+    >>> hashlib.sha224(b"Nobody inspects the spammish repetition").hexdigest()
+    'a4337bc45a8fc544c03f52dc550cd6e1e87021bc896588bd79e901e2'
+
+"""
+
+# This tuple and __get_builtin_constructor() must be modified if a new
+# always available algorithm is added.
+__always_supported = ('md5', 'sha1', 'sha224', 'sha256', 'sha384', 'sha512',
+                      'blake2b', 'blake2s',
+                   """HMAC (Keyed-Hashing for Message Authentication) module.
+
+Implements the HMAC algorithm as described by RFC 2104.
+"""
+
+import warnings as _warnings
+try:
+    import _hashlib as _hashopenssl
+except ImportError:
+    _hashopenssl = None
+    _functype = None
+    from _operator import _compare_digest as compare_digest
+else:
+    compare_digest = _hashopenssl.compare_digest
+    _functype = type(_hashopenssl.openssl_sha256)  # builtin type
+
+import hashlib as _hashlib
+
+trans_5C = bytes((x ^ 0x5C) for x in range(256))
+trans_36 = bytes((x ^ 0x36) for x in range(256))
+
+# The size of the digests returned by HMAC depends on the underlying
+# hashing module used.  Use digest_size from the instance of HMAC instead.
+digest_size = None
+
+
+class HMAC:
+    """RFC 2104 HMAC class.  Also complies with RFC 4231.
+
+    This supports the API for Cryptographic Hash Functions (PEP 247).
+    """
+    blocksize = 64  # 512-bit HMAC; can be changed in subclasses.
+
+    __slots__ = (
+        "_hmac", "_inner", "_outer", "block_size", "digest_size"
+    )
+
+    def __init__(self, key, msg=None, digestmod=''):
+        """Create a new HMAC object.
+
+        key: bytes or buffer, key for the keyed hash object.
+        msg: bytes or buffer, Initial input for the hash or None.
+        digestmod: A hash name suitable for hashlib.new(). *OR*
+                   A hashlib constructor returning a new hash object. *OR*
+                   A module supporting PEP 247.
+
+                   Required as of 3.8, despite its position after the optional
+                   msg argument.  Passing it as a keyword argument is
+                   recommended, though not required for legacy API reasons.
+        """
+
+        if not isinstance(key, (bytes, bytearray)):
+            raise TypeError("key: expected bytes or bytearray, but got %r" % type(key).__name__)
+
+        if not digestmod:
+            raise TypeError("Missing required argument 'digestmod'.")
+
+        if _hashopenssl and isinstance(digestmod, (str, _functype)):
+            try:
+                self._init_hmac(key, msg, digestmod)
+            except _hashopenssl.UnsupportedDigestmodError:
+                self._init_old(key, msg, digestmod)
+        else:
+            self._init_old(key, msg, digestmod)
+
+    def _init_hmac(self, key, msg, digestmod):
+        self._hmac = _hashopenssl.hmac_new(key, msg, digestmod=digestmod)
+        self.digest_size = self._hmac.digest_size
+        self.block_size = self._hmac.block_size
+
+    def _init_old(self, key, msg, digest"""Recognize image file formats based on their first few bytes."""
+
+from os import PathLike
+import warnings
+
+__all__ = ["what"]
+
+
+warnings._deprecated(__name__, remove=(3, 13))
+
+
+#-------------------------#
+# Recognize image headers #
+#-------------------------#
+
+def what(file, h=None):
+    f = None
+    try:
+        if h is None:
+            if isinstance(file, (str, PathLike)):
+                f = open(file, 'rb')
+                h = f.read(32)
+            else:
+                location = file.tell()
+                h = file.read(32)
+                file.seek(location)
+        for tf in tests:
+            res = tf(h, f)
+            if res:
+                return res
+    finally:
+        if f: f.close()
+    return None
+
+
+#---------------------------------#
+# Subroutines per image file type #
+#---------------------------------#
+
+tests = []
+
+def test_jpeg(h, f):
+    """JPEG data with JFIF or Exif markers; and raw JPEG"""
+    if h[6:10] in (b'JFIF', b'Exif'):
+        return 'jpeg'
+    elif h[:4] == b'\xff\xd8\xff\xdb':
+        return 'jpeg'
+
+tests.append(test_jpeg)
+
+def test_png(h, f):
+    if h.startswith(b'\211PNG\r\n\032\n'):
+        return 'png'
+
+tests.append(test_png)
+
+def test_gif(h, f):
+    """GIF ('87 and '89 variants)"""
+    if h[:6] in (b'GIF87a', b'GIF89a'):
+        return 'gif'
+
+tests.append(test_gif)
+
+def test_tiff(h, f):
+    """TIFF (can be in Motorola or Intel byte order)"""
+    if h[:2] in (b'MM', b'II'):
+        return 'tiff'
+
+tests.append(test_tiff)
+
+def test_rgb(h, f):
+    """SGI image library"""
+    if h.startswith(b'\001\332'):
+        return 'rgb'
+
+tests.append(test_rgb)
+
+def test_pbm(h, f):
+    """PBM (portable bitmap)"""
+    if len(h) >= 3 and \
+        h[0] == ord(b'P') and h[1] in b'14' and h[2] in b' \t\n\r':
+        return 'pbm'
+
+tests.append(test_pbm)
+
+def test_pgm(h, f):
+    """PGM (portable graymap)"""
+    if len(h) >= 3 and \
+        h[0] == ord(b'P') and h[1] in b'25' and h[2] in b' \t\n\r':
+        return 'pgm'
+
+tests.append(test_pgm)
+
+def test_ppm(h, f):
+    """PPM (portable pixmap)"""
+    if len(h) >= 3 and \
+        h[0] == ord(b'P') and h[1] in b'36' and h[2] in b' \t\n\r':
+        return 'ppm'
+
+tests.append(test_ppm)
+
+def test_rast(h, f):
+    """Sun raster file"""
+    if h.startswith(b'\x59\xA6\x6A\x95'):
+        return 'rast'
+
+tests.append(test_rast)
+
+def test_xbm(h, f):
+    """X bitmap (X10 or X11)"""
+    if h.startswith(b'#define '):
+        return 'xbm'
+
+tests.append(test_xbm)
+
+def test_bmp(h, f):
+    if h.startswith("""Get useful information from live Python objects.
+
+This module encapsulates the interface provided by the internal special
+attributes (co_*, im_*, tb_*, etc.) in a friendlier fashion.
+It also provides some help for examining source code and class layout.
+
+Here are some of the useful functions provided by this module:
+
+    ismodule(), isclass(), ismethod(), isfunction(), isgeneratorfunction(),
+        isgenerator(), istraceback(), isframe(), iscode(), isbuiltin(),
+        isroutine() - check object types
+    getmembers() - get members of an object that satisfy a given condition
+
+    getfile(), getsourcefile(), getsource() - find an object's source code
+    getdoc(), getcomments() - get documentation on an object
+    getmodule() - determine the module that an object came from
+    getclasstree() - arrange classes so as to represent their hierarchy
+
+    getargvalues(), getcallargs() - get info about function arguments
+    getfullargspec() - same, with support for Python 3 features
+    formatargvalues() - format an argument spec
+    getouterframes(), getinnerframes() - get info about frames
+    currentframe() - get the current stack frame
+    stack(), trace() - get info about frames on the stack or in a traceback
+
+    signature() - get a Signature object for the callable
+
+    get_annotations() - safely compute an object's annotations
+"""
+
+# This module is in the public domain.  No warranties.
+
+__author__ = ('Ka-Ping Yee <ping@lfw.org>',
+              'Yury Selivanov <yselivanov@sprymix.com>')
+
+__all__ = [
+    "ArgInfo",
+    "Arguments",
+    "Attribute",
+    "BlockFinder",
+    "BoundArguments",
+    "CORO_CLOSED",
+    "CORO_CREATED",
+    "CORO_RUNNING",
+    "CORO_SUSPENDED",
+    "CO_ASYNC_GENERATOR",
+    "CO_COROUTINE",
+    "CO_GENERATOR",
+    "CO_ITERABLE_COROUTINE",
+    "CO_NESTED",
+    "CO_NEWLOCALS",
+    "CO_NOFREE",
+    "CO_OPTIMIZED",
+    "CO_VARARGS",
+    "CO_VARKEYWORDS",
+    "ClassFoundException",
+    "ClosureVars",
+    "EndOfBlock",
+    "FrameInfo",
+    "FullArgSpec",
+    "GEN_CLOSED",
+    "GEN_CREATED",
+    "GEN_RUNNING",
+    "GEN_SUSPENDED",
+    "Parameter",
+    "Signature",
+    "TPFLAGS_IS_ABSTRACT",
+    "Traceback",
+    "classify_class_attrs",
+    "cleandoc",
+    "currentframe",
+    "findsource",
+    "formatannotation",
+    "formatannotationrelativeto",
+    "formatargvalues",
+    "get_annotations",
+    "getabsfile",
+    "getargs",
+    "getargvalues",
+    "getattr_static",
+    "getblock",
+    "getcallargs",
+    "getclasstree",
+    "getclosurevars",# Copyright 2007 Google Inc.
+#  Licensed to PSF under a Contributor Agreement.
+
+"""A fast, lightweight IPv4/IPv6 manipulation library in Python.
+
+This library is used to create/poke/manipulate IPv4 and IPv6 addresses
+and networks.
+
+"""
+
+__version__ = '1.0'
+
+
+import functools
+
+IPV4LENGTH = 32
+IPV6LENGTH = 128
+
+
+class AddressValueError(ValueError):
+    """A Value Error related to the address."""
+
+
+class NetmaskValueError(ValueError):
+    """A Value Error related to the netmask."""
+
+
+def ip_address(address):
+    """Take an IP string/int and return an object of the correct type.
+
+    Args:
+        address: A string or integer, the IP address.  Either IPv4 or
+          IPv6 addresses may be supplied; integers less than 2**32 will
+          be considered to be IPv4 by default.
+
+    Returns:
+        An IPv4Address or IPv6Address object.
+
+    Raises:
+        ValueError: if the *address* passed isn't either a v4 or a v6
+          address
+
+    """
+    try:
+        return IPv4Address(address)
+    except (AddressValueError, NetmaskValueError):
+        pass
+
+    try:
+        return IPv6Address(address)
+    except (AddressValueError, NetmaskValueError):
+        pass
+
+    raise ValueError(f'{address!r} does not appear to be an IPv4 or IPv6 address')
+
+
+def ip_network(address, strict=True):
+    """Take an IP string/int and return an object of the correct type.
+
+    Args:
+        address: A string or integer, the IP network.  Either IPv4 or
+          IPv6 networks may be supplied; integers less than 2**32 will
+          be considered to be IPv4 by default.
+
+    Returns:
+        An IPv4Network or IPv6Network object.
+
+    Raises:
+        ValueError: if the string passed isn't either a v4 or a v6
+          address. Or if the network has host bits set.
+
+    """
+    try:
+        return IPv4Network(address, strict)
+    except (AddressValueError, NetmaskValueError):
+        pass
+
+    try:
+        return IPv6Network(address, strict)
+    except (AddressValueError, NetmaskValueError):
+        pass
+
+    raise ValueError(f'{address!r} does not appear to be an IPv4 or IPv6 network')
+
+
+def ip_interface(address):
+    """Take an IP string/int and return an object of the correct type.
+
+    Args:
+        address: A string or integer, the IP address.  Either IPv4 or
+          IPv6 addresses may be supplied; integers less than 2**32 will
+          be considered to be IPv4 by default.
+
+    Returns:
+        An IPv4Interface or IPv6Interface object.
+
+    Raises:
+        ValueError: if the string """Cache lines from Python source files.
+
+This is intended to read lines from modules imported -- hence if a filename
+is not found, it will look down the module search path for a file by
+that name.
+"""
+
+import functools
+import sys
+import os
+import tokenize
+
+__all__ = ["getline", "clearcache", "checkcache", "lazycache"]
+
+
+# The cache. Maps filenames to either a thunk which will provide source code,
+# or a tuple (size, mtime, lines, fullname) once loaded.
+cache = {}
+
+
+def clearcache():
+    """Clear the cache entirely."""
+    cache.clear()
+
+
+def getline(filename, lineno, module_globals=None):
+    """Get a line for a Python source file from the cache.
+    Update the cache if it doesn't contain an entry for this file already."""
+
+    lines = getlines(filename, module_globals)
+    if 1 <= lineno <= len(lines):
+        return lines[lineno - 1]
+    return ''
+
+
+def getlines(filename, module_globals=None):
+    """Get the lines for a Python source file from the cache.
+    Update the cache if it doesn't contain an entry for this file already."""
+
+    if filename in cache:
+        entry = cache[filename]
+        if len(entry) != 1:
+            return cache[filename][2]
+
+    try:
+        return updatecache(filename, module_globals)
+    except MemoryError:
+        clearcache()
+        return []
+
+
+def checkcache(filename=None):
+    """Discard cache entries that are out of date.
+    (This is not checked upon each call!)"""
+
+    if filename is None:
+        filenames = list(cache.keys())
+    elif filename in cache:
+        filenames = [filename]
+    else:
+        return
+
+    for filename in filenames:
+        entry = cache[filename]
+        if len(entry) == 1:
+            # lazy cache entry, leave it lazy.
+            continue
+        size, mtime, lines, fullname = entry
+        if mtime is None:
+            continue   # no-op for files loaded via a __loader__
+        try:
+            stat = os.stat(fullname)
+        except OSError:
+            cache.pop(filename, None)
+            continue
+        if size != stat.st_size or mtime != stat.st_mtime:
+            cache.pop(filename, None)
+
+
+def updatecache(filename, module_globals=None):
+    """Update a cache entry and return its list of lines.
+    If something's wrong, print a message, discard the cache entry,
+    and return an empty list."""
+
+    if filename in cache:
+        if len(cache[filename]) != 1:
+            cache.pop(filename, None)
+    if not filename or (filename.startswith('<') and filename.endswith('>')):
+     """Interface to the liblzma compression library.
+
+This module provides a class for reading and writing compressed files,
+classes for incremental (de)compression, and convenience functions for
+one-shot (de)compression.
+
+These classes and functions support both the XZ and legacy LZMA
+container formats, as well as raw compressed data streams.
+"""
+
+__all__ = [
+    "CHECK_NONE", "CHECK_CRC32", "CHECK_CRC64", "CHECK_SHA256",
+    "CHECK_ID_MAX", "CHECK_UNKNOWN",
+    "FILTER_LZMA1", "FILTER_LZMA2", "FILTER_DELTA", "FILTER_X86", "FILTER_IA64",
+    "FILTER_ARM", "FILTER_ARMTHUMB", "FILTER_POWERPC", "FILTER_SPARC",
+    "FORMAT_AUTO", "FORMAT_XZ", "FORMAT_ALONE", "FORMAT_RAW",
+    "MF_HC3", "MF_HC4", "MF_BT2", "MF_BT3", "MF_BT4",
+    "MODE_FAST", "MODE_NORMAL", "PRESET_DEFAULT", "PRESET_EXTREME",
+
+    "LZMACompressor", "LZMADecompressor", "LZMAFile", "LZMAError",
+    "open", "compress", "decompress", "is_check_supported",
+]
+
+import builtins
+import io
+import os
+from _lzma import *
+from _lzma import _encode_filter_properties, _decode_filter_properties
+import _compression
+
+
+_MODE_CLOSED   = 0
+_MODE_READ     = 1
+# Value 2 no longer used
+_MODE_WRITE    = 3
+
+
+class LZMAFile(_compression.BaseStream):
+
+    """A file object providing transparent LZMA (de)compression.
+
+    An LZMAFile can act as a wrapper for an existing file object, or
+    refer directly to a named file on disk.
+
+    Note that LZMAFile provides a *binary* file interface - data read
+    is returned as bytes, and data to be written must be given as bytes.
+    """
+
+    def __init__(self, filename=None, mode="r", *,
+                 format=None, check=-1, preset=None, filters=None):
+        """Open an LZMA-compressed file in binary mode.
+
+        filename can be either an actual file name (given as a str,
+        bytes, or PathLike object), in which case the named file is
+        opened, or it can be an existing file object to read from or
+        write to.
+
+        mode can be "r" for reading (default), "w" for (over)writing,
+        "x" for creating exclusively, or "a" for appending. These can
+        equivalently be given as "rb", "wb", "xb" and "ab" respectively.
+
+        format specifies the container format to use for the file.
+        If mode is "r", this defaults to FORMAT_AUTO. Otherwise, the
+        default is FORMAT_XZ.
+
+        check specifies the integrity check to use. This argument can
+        only be used when opening a file for writing. For FORMAT_XZ,
+        the default is CHECK_CRC64. FORMAT_ALO"""Mailcap file handling.  See RFC 1524."""
+
+import os
+import warnings
+import re
+
+__all__ = ["getcaps","findmatch"]
+
+
+_DEPRECATION_MSG = ('The {name} module is deprecated and will be removed in '
+                    'Python {remove}. See the mimetypes module for an '
+                    'alternative.')
+warnings._deprecated(__name__, _DEPRECATION_MSG, remove=(3, 13))
+
+
+def lineno_sort_key(entry):
+    # Sort in ascending order, with unspecified entries at the end
+    if 'lineno' in entry:
+        return 0, entry['lineno']
+    else:
+        return 1, 0
+
+_find_unsafe = re.compile(r'[^\xa1-\U0010FFFF\w@+=:,./-]').search
+
+class UnsafeMailcapInput(Warning):
+    """Warning raised when refusing unsafe input"""
+
+
+# Part 1: top-level interface.
+
+def getcaps():
+    """Return a dictionary containing the mailcap database.
+
+    The dictionary maps a MIME type (in all lowercase, e.g. 'text/plain')
+    to a list of dictionaries corresponding to mailcap entries.  The list
+    collects all the entries for that MIME type from all available mailcap
+    files.  Each dictionary contains key-value pairs for that MIME type,
+    where the viewing command is stored with the key "view".
+
+    """
+    caps = {}
+    lineno = 0
+    for mailcap in listmailcapfiles():
+        try:
+            fp = open(mailcap, 'r')
+        except OSError:
+            continue
+        with fp:
+            morecaps, lineno = _readmailcapfile(fp, lineno)
+        for key, value in morecaps.items():
+            if not key in caps:
+                caps[key] = value
+            else:
+                caps[key] = caps[key] + value
+    return caps
+
+def listmailcapfiles():
+    """Return a list of all mailcap files found on the system."""
+    # This is mostly a Unix thing, but we use the OS path separator anyway
+    if 'MAILCAPS' in os.environ:
+        pathstr = os.environ['MAILCAPS']
+        mailcaps = pathstr.split(os.pathsep)
+    else:
+        if 'HOME' in os.environ:
+            home = os.environ['HOME']
+        else:
+            # Don't bother with getpwuid()
+            home = '.' # Last resort
+        mailcaps = [home + '/.mailcap', '/etc/mailcap',
+                '/usr/etc/mailcap', '/usr/local/etc/mailcap']
+    return mailcaps
+
+
+# Part 2: the parser.
+def readmailcapfile(fp):
+    """Read a mailcap file and return a dictionary keyed by MIME type."""
+    warnings.warn('readmailcapfile is deprecated, use getcaps instead',
+                  DeprecationWarning, 2)
+    caps, _ = _readmailcapfile(fp, None)
+    retur

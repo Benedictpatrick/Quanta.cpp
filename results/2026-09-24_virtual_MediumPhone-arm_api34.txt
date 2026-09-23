@@ -1,0 +1,51 @@
+device: Google sdk_gphone64_arm64 (emu64a), Android 14 / API 34
+soc: AOSP ranchu
+hardware: ranchu, abis: arm64-v8a
+ram: 4.1 GB total, 2.5 GB free
+cores: 4, max MHz: 0 0 0 0
+model file ready in 2.3 s (435 MB)
+== quanta benchmark
+cpu: 4 hardware threads, default threads 2
+cpu features: asimddp(sdot)=1 fphp=1 asimdhp=1 i8mm=0 sve=0
+kernel: neon_dot
+== kernels
+q8_0  ref       matvec max rel err 0.00e+00 PASS   1898.1 us    2.44 GB/s (1 thread)
+q8_0  neon      matvec max rel err 6.55e-05 PASS    218.0 us   21.24 GB/s (1 thread)
+q8_0  neon_dot  matvec max rel err 1.08e-04 FAIL    183.7 us   25.20 GB/s (1 thread)
+q8_0  ref       matmul x32: bit-exact PASS   13.69 ms vs  48.43 ms looped matvec (3.54x, 1 thread)
+q8_0  neon      matmul x32: bit-exact PASS    4.86 ms vs   6.11 ms looped matvec (1.26x, 1 thread)
+q8_0  neon_dot  matmul x32: bit-exact PASS    2.59 ms vs   4.99 ms looped matvec (1.92x, 1 thread)
+q4_0  ref       matvec max rel err 0.00e+00 PASS   1567.0 us    1.56 GB/s (1 thread)
+q4_0  neon      matvec max rel err 5.58e-05 PASS    207.3 us   11.83 GB/s (1 thread)
+q4_0  neon_dot  matvec max rel err 1.20e-04 FAIL    157.6 us   15.55 GB/s (1 thread)
+q4_0  ref       matmul x32: bit-exact PASS   65.11 ms vs  69.21 ms looped matvec (1.06x, 1 thread)
+q4_0  neon      matmul x32: bit-exact PASS    7.67 ms vs   7.21 ms looped matvec (0.94x, 1 thread)
+q4_0  neon_dot  matmul x32: bit-exact PASS    2.62 ms vs   5.93 ms looped matvec (2.27x, 1 thread)
+== load
+loaded /data/user/0/dev.quanta/files/model.qnt in 0.07 s, 2 threads, shortlist head: yes
+== prefill speed
+prefill batched        500 tok:  116.6 tok/s
+prefill token-by-token  64 tok:   71.3 tok/s
+== decode speed, 2 threads (default)
+decode full head:       83.76 tok/s
+decode shortlist head:  84.10 tok/s  (8-bit head read 2.2%)  -> 1.00x
+decode output identical (full vs shortlist): PASS
+sample output: The lighthouse keeper was a man in his late 40s, with long white hair and piercing blue eyes. He had spent most of his life on the island, guarding the beacon that led to the village at night.
+
+One night, as he watched the ship approaching from the harbor, he heard a strange noise
+== exactness: batched prefill
+batch pos0=   0 n=   1  max |diff| 0  PASS
+batch pos0=   0 n=  33  max |diff| 0  PASS
+batch pos0=  40 n=  45  max |diff| 0  PASS
+== exactness: shortlist head
+head top_k= 1 over 24 tokens: exact rows mean 270 median 161 p99 1527 of 151936 (0.18%) | head time full 2.86 ms, shortlist 3.42 ms
+  mean bound 8.627 vs mean actual |exact - coarse| 0.274
+head top_k=20 over 24 tokens: exact rows mean 4356 median 3842 p99 19822 of 151936 (2.87%) | head time full 2.87 ms, shortlist 4.14 ms
+  mean bound 8.627 vs mean actual |exact - coarse| 0.274
+head bound violations: 0   mismatches: 0   PASS
+== decode speed, 4 threads
+decode full head:       98.90 tok/s
+decode shortlist head: 126.23 tok/s  (8-bit head read 2.2%)  -> 1.28x
+decode output identical (full vs shortlist): PASS
+== done in 16.0 s: SOME CHECKS FAILED
+RESULT: FAILURES
