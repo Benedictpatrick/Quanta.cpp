@@ -118,3 +118,13 @@ Findings:
   ~1% of vocabulary rows (256-4096 clusters). Killed. Oracle 4-bit screen alone: 0.08% rows exact (top-1), 2.3% (top-20).
 - **Lossless entropy coding of Q8_0 ints**: entropy 7.65 bits/weight -> ~4% saving. Killed.
 - **Analytic ceiling of the shortlist head** (head bytes share): Qwen2.5-0.5B q4mix <= 1.19x; Gemma3-270M <= 1.43x.
+- **Shortlist head variants** (`research/head_deep.py`, 2284 real hidden states, exact by construction, bytes read per
+  token as share of the 8-bit head):
+  | screen | extra memory | top-1 | top-20 |
+  |---|---|---|---|
+  | separate Q4 copy + L2 norms (engine today) | +85 MB | 58.9% | 61.2% |
+  | **high nibble plane of the Q8 ints, analytic bound 8·d·‖x_b‖₁** | **0** | **53.0%** | **56.1%** |
+  | top-2-bit plane first, then nibble | 0 | 52.9% | 57.3% (2-bit screen prunes <1%) |
+  | SVD rank 64-256 + residual bound | +11-40 MB | >100% (hidden states are not low-rank: ‖x⊥‖/‖x‖ ≈ 0.95) |
+  Winner: store the 8-bit head as two nibble planes; screen with the high plane; exact rows read only the low plane.
+  Zero extra memory and ~10% fewer head bytes than today. Speed ceiling still ~1.2x (every row's plane is read).
