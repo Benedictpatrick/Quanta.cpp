@@ -105,3 +105,16 @@ Findings:
    `selftest`, `checkbatch`, `checkhead` (exactness + head time), `ppl`, then `run` speed for q8_0 / q4mix / q4mix-sl
    with and without `--no-batch` / `--full-head`.
 4. ~~Batched prefill~~, ~~Exact Shortlist Head (N7)~~ done; multi-token matmul kernels done (phone-verify) → then the Android app.
+
+## Idea sprint, negative results (2026-09-27)
+- **Batch cost curve** (`quanta batchcurve`, PC ref kernels, q8_0, ctx 256, 4 threads): forward() 35.7 ms;
+  forward_batch n=1 27.6, n=2 35.5, n=4 51.5, n=8 89.3, n=32 326 ms. Against forward_batch(1), n=2 costs ~1.3x.
+  Note: single-token forward() is slower than forward_batch(1) on PC (137 vs 89 ms single-thread) -> investigate.
+- **Nested self-speculation** (`research/nested_accept.py`): draft = top bits of the same Q8_0 ints (no extra memory).
+  Greedy agreement with the 8-bit model over 20 chat prompts x 128 tokens: hi4 73.9%, hi3 48.8%, hi2 0.5%,
+  separate Q4 RTN copy 75.7%. hi4, k=4: 2.99 tokens per verify pass. Projected speedup with PC costs <= ~1.14x:
+  the 4-bit draft still reads ~half the bytes. Killed.
+- **Cluster funnel before the 4-bit screen** (`research/funnel.py`): k-means centroid + radius bounds prune only
+  ~1% of vocabulary rows (256-4096 clusters). Killed. Oracle 4-bit screen alone: 0.08% rows exact (top-1), 2.3% (top-20).
+- **Lossless entropy coding of Q8_0 ints**: entropy 7.65 bits/weight -> ~4% saving. Killed.
+- **Analytic ceiling of the shortlist head** (head bytes share): Qwen2.5-0.5B q4mix <= 1.19x; Gemma3-270M <= 1.43x.

@@ -33,6 +33,10 @@ struct BenchOptions {
 // Full on-device report: CPU info, kernel checks, exactness checks, prefill/decode speed (full vs shortlist head).
 bool run_benchmark(const std::string& model_path, const BenchOptions& opt, const Log& log);
 
+// Cost of one forward_batch pass of n = 1, 2, 4, 8, 16, 32 tokens at context `pos0`, vs one decode step.
+// "Nearly free" batch sizes (cost close to 1x) are what speculation / diffusion decoding can use.
+void run_batch_curve(Model& model, const std::vector<int>& ids, int pos0, const Log& log);
+
 // A few hundred tokens of plain English used by the checks and benchmark.
 const char* sample_text();
 

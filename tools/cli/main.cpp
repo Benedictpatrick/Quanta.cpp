@@ -63,6 +63,7 @@ struct Args {
                  "  quanta ppl      -m model.qnt -f FILE [-n 1024]         perplexity of the first n tokens\n"
                  "  quanta checkbatch -m model.qnt (-p TEXT | -f FILE)     batched prefill must equal token-by-token\n"
                  "  quanta checkhead  -m model.qnt (-p TEXT | -f FILE)     shortlist head must equal the full head\n"
+                 "  quanta batchcurve -m model.qnt                         cost of a pass of 1..32 tokens vs one decode step\n"
                  "  quanta compare   -m model.qnt [-t N]                   engine-comparison protocol (threads 2,4)\n"
                  "  quanta prompt                                          print the comparison prompt\n"
                  "  quanta bench     -m model.qnt                          full on-device report (checks + speed)\n"
@@ -252,6 +253,10 @@ int main(int argc, char** argv) {
 
     if (a.cmd == "checkbatch") return quanta::check_batch(model, tok.encode(text), print) ? 0 : 1;
     if (a.cmd == "checkhead") return quanta::check_head(model, tok, tok.encode(text), print) ? 0 : 1;
+    if (a.cmd == "batchcurve") {
+        quanta::run_batch_curve(model, tok.encode(quanta::sample_text()), 256, print);
+        return 0;
+    }
 
     if (a.cmd == "ppl") {
         // Perplexity of the first -n tokens of the text (one context window, scored from token 1 on).

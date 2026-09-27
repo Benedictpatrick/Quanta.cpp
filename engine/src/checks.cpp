@@ -238,6 +238,30 @@ bool check_head(Model& model, const Tokenizer& tok, const std::vector<int>& ids,
     return violations == 0 && bad == 0;
 }
 
+void run_batch_curve(Model& model, const std::vector<int>& ids, int pos0, const Log& log) {
+    std::vector<int> toks;
+    while (int(toks.size()) < pos0 + Model::kBatch) toks.insert(toks.end(), ids.begin(), ids.end());
+    model.forward_batch(toks.data(), pos0, 0);  // context
+    // Each timed pass rewrites the same KV positions [pos0, pos0+n), so the context stays fixed.
+    auto time_ms = [&](auto&& pass) {
+        pass();  // warm-up
+        double best = 1e30;
+        for (int rep = 0; rep < 5; ++rep) {
+            const auto t = Clock::now();
+            pass();
+            best = std::min(best, seconds_since(t) * 1e3);
+        }
+        return best;
+    };
+    const double one = time_ms([&] { model.forward(toks[pos0], pos0); });
+    logf(log, "context %d, %d threads; decode step (forward) %.2f ms", pos0, model.n_threads(), one);
+    logf(log, "   n    ms/pass   cost vs decode   tok/s");
+    for (int n : {1, 2, 4, 8, 16, 32}) {
+        const double ms = time_ms([&] { model.forward_batch(toks.data() + pos0, n, pos0); });
+        logf(log, "  %2d  %9.2f   %10.2fx   %8.1f", n, ms, ms / one, n * 1e3 / ms);
+    }
+}
+
 std::string compare_prompt() {
     return std::string(sample_text()) + "\n\n" + sample_text() + "\n\nWrite a new chapter of this story:";
 }
@@ -369,6 +393,10 @@ bool run_benchmark(const std::string& model_path, const BenchOptions& opt, const
         for (int id : decode_speed(model)) sample += tok.decode(id);
         logf(log, "sample output: %.300s", sample.c_str());
     }
+    if (time_left("batch cost curve")) {
+        log("== batch cost curve");
+        run_batch_curve(model, ids, 256, log);
+    }
     if (time_left("batch check")) {
         log("== exactness: batched prefill");
         ok &= check_batch(model, std::vector<int>(ids.begin(), ids.begin() + std::min<size_t>(ids.size(), 100)), log,
@@ -388,6 +416,7 @@ bool run_benchmark(const std::string& model_path, const BenchOptions& opt, const
         }
         logf(log, "== decode speed, %d threads", m.n_threads());
         decode_speed(m);
+        if (time_left("batch cost curve")) run_batch_curve(m, ids, 256, log);
     }
     logf(log, "== done in %.1f s: %s", seconds_since(t_start), ok ? "ALL PASS" : "SOME CHECKS FAILED");
     return ok;
